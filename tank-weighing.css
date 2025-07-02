@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    
+    background-color: white;
+    padding-top: 2.5rem;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #000000;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    /* Base black background */
+}
+
+
+#static-nav {
+    font-family: 'Josefin Sans', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(0, 0, 0);
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.compact-nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+
+.top-splash {
+    width: 100%;
+    padding-top: 1rem;
+    overflow: hidden;
+
+    /* Prevent image overflow */
+}
+
+.top-splash img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+header {
+    font-family: 'VT323', serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-title {
+    padding: 0;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    /* Adjust this value as needed */
+}
+
+.top-subtitle {
+    margin-top: 1rem;
+    letter-spacing: 0.3rem;;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+
+
+.segment {
+    align-self: center;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.screen-segment {
+    align-self: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    
+}
+
+/* For smaller screens: let height grow with content */
+@media (max-width: 768px) {
+    .screen-segment {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+b {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-family: 'VT323', serif;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin: 1rem 0;
+}
+
+img {
+    margin: 1rem 0;
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.left-col, .right-col {
+    text-align: center;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.photo-grid-parallax {
+    position: relative;
+    height: 10vh; 
+    pointer-events: none
+}
+
+.horizontal-gallery {
+    position: fixed;
+    width: 100vw;
+    height: 45vh;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    pointer-events: none;
+    
+}
+#gallery1 {
+    top: 10vh;
+}
+
+#gallery2 {
+    top: 50vh;
+}
+
+.horizontal-gallery img {  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: all;
+}
+
+.horizontal-gallery img:hover {
+    filter: brightness(0.7);
+    
+    transition: 0.3s ease-in-out;
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    color: white;
+
+    background-color: rgba(13, 14, 83);
+    /* or use a solid color: background-color: #222; */
+    padding: 1rem;
+
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}

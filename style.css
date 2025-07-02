@@ -1,0 +1,239 @@
+:root {
+  --shadow-color: 0deg 0% 64%;
+  --shadow-elevation-low:
+    0.1px 0.2px 0.2px hsl(var(--shadow-color) / 0.46),
+    0.1px 0.4px 0.4px -1.7px hsl(var(--shadow-color) / 0.38),
+    0.4px 0.9px 1px -3.4px hsl(var(--shadow-color) / 0.29);
+  --shadow-elevation-medium:
+    0.1px 0.2px 0.2px hsl(var(--shadow-color) / 0.48),
+    0.2px 0.6px 0.6px -1.1px hsl(var(--shadow-color) / 0.42),
+    0.7px 1.8px 1.9px -2.3px hsl(var(--shadow-color) / 0.35),
+    1.8px 4.6px 4.9px -3.4px hsl(var(--shadow-color) / 0.28);
+  --shadow-elevation-high:
+    0.1px 0.2px 0.2px hsl(var(--shadow-color) / 0.45),
+    0.4px 0.9px 1px -0.5px hsl(var(--shadow-color) / 0.42),
+    0.7px 1.8px 1.9px -1px hsl(var(--shadow-color) / 0.39),
+    1.3px 3.3px 3.5px -1.5px hsl(var(--shadow-color) / 0.36),
+    2.2px 5.7px 6px -2px hsl(var(--shadow-color) / 0.32),
+    3.7px 9.5px 10px -2.5px hsl(var(--shadow-color) / 0.29),
+    5.9px 15px 15.8px -3px hsl(var(--shadow-color) / 0.26),
+    8.9px 22.7px 24px -3.4px hsl(var(--shadow-color) / 0.23);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #000000;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    /* Base black background */
+    background-color: #ffffff;
+}
+
+a {
+    color: black;
+}
+
+
+header {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 3rem 1rem;
+    text-align: center;
+    letter-spacing: 0.05rem;
+}
+
+
+#sticky-nav {
+    font-family: 'Josefin Sans', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(0, 0, 0);
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+
+#sticky-nav.active {
+    transform: translateY(0);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.subheading {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+main {
+    padding: 1rem 1rem;
+    margin: 0;
+    width: 100%;
+    /* Ensure main section takes up the full width */
+}
+
+.about {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    width: 700px;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-family: 'VT323', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.projects {
+    width: 100%;
+    /* Make the projects section full width */
+    padding: 0rem 0rem;
+}
+
+
+/* Update .project-grid to span full width */
+.project-grid {
+    column-count: 3;
+    column-gap: 3rem;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+.project-card {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 3rem;
+    break-inside: avoid;
+    display: block;
+    border-radius: 15px;
+    box-shadow: var(--shadow-elevation-high);
+    
+}
+
+
+.project-card:hover {
+  transform: translateY(5px);
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    /*height: 250px; /* Set a fixed height for the image */
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    /* start transparent */
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 0;
+}
+
+/*
+.image-wrapper:hover::after {
+    background: rgba(0, 0, 0, 0.4);
+    /* darken on hover 
+}*/
+
+.project-card h3 {
+    font-family: 'VT323', sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    margin: 0.5rem auto;
+    margin-bottom: 0rem;
+    margin-left: 1rem;
+}
+
+.project-card p {
+    font-family: 'VT323', sans-serif;
+    font-size: 1.5rem;
+    opacity: 0.6;
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
+    margin: 0 auto;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    width: 100%;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    opacity: 0.5;
+    font-size: 0.9rem;
+}

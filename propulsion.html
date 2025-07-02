@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack Do Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="propulsion-style.css" />
+</head>
+
+<body>
+    <nav class="compact-nav" id="static-nav">
+        <div class="nav-title"><a href="index.html">Jack Do</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="top-splash">
+            <video autoplay muted loop>
+                <source src="./img/propulsion/shf.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <header class="top-header">
+            <h1 class="top-title">24-25 PROPULSION</h1>
+            <h2 class="top-subtitle">O-CLASS SOLID ROCKET MOTOR FOR 30K FLIGHT</h2>
+        </header>
+
+        <div class="foreword statement flex-col"> 
+            <p>The 2024–2025 school year marked my first year with Duke AERO's solid propulsion subteam. As a freshman, this gave me the invaluable opportunity early on to get hands-on, learn, and refine my manufacturing techniques. This work culminated in a successful static fire test and a nominal motor burn at IREC 2025.</p>
+            <p>This project page is not a complete account of all projects we did, but aims to showcase projects that I worked directly on and contributed significantly to.</p>
+        </div>
+
+        <div class="screen-segment flex-row manufacturing">
+            <div class="left-img"></div>
+            <h3>Manufacturing</h3>
+            <div class="right-img"></div>
+        </div>
+
+        <div class="hydro-closure segment flex-row">
+            <div class="left-img">
+                <img src = "./img/propulsion/hydro-closure.jpg" alt="hydro closure">
+            </div>
+            <div class="right-col">
+                <h4>HYDROSTATIC CLOSURE</h4>
+                <p>
+                    This is a 5.5" diamater hydrostatic closure, machined down from a 5.75" OD solid block of 6061 Aluminum. This closure is used for the hydrostatic test of the motorcase, where we pressurized the motorcase up to ~1375 psi, which is over 2.5x the expected chamber pressure. 
+                </p>
+                <p>
+                    The most time-consuming operations in manufacturing this part were getting the piece down to diameter and facing the ends, which took about 3-4 hours on the lathe. The O-ring grooves were cut using a parting tool, and the radial bolt holes were drilled and tapped for 1/2"-13 bolts using the 4th axis on a mill. There is a central through hole to pressurize the motorcase, which is tapped with 1/4" NPT thread.
+                </p>
+            </div>
+        </div>
+
+        <div class="test-closure segment flex-row">
+            <div class="left-col">
+                <h4>TEST CLOSURE</h4>
+                <p>
+                    Arguably the most machine-intensive part of all 3 closures, this 5.5" OD closure was designed to mount a pressure transducer and transfer load to a load cell for both our hydrostatic test and static fire test.  
+                </p>
+                <p>
+                    The general manufacturing process was similar to the other closures, with O-ring grooves and radial holes. The significant difference is the closure head, where a lot of material had to be removed on the lathe down to the head diameter, then the necking was done using multiple passes with a parting tool. The final finishing touch was a deep blind hole down the center for the pressure tap, and a radial NPT tapped hole for the pressure transducer.
+                </p>
+            </div>
+            <div class="right-img">
+                <img src = "./img/propulsion/shf-closure-1.jpg" alt="test closure">
+            </div>
+        </div>
+
+        <div class="flight-closure segment flex-row">
+            <div class="left-img">
+                <img src = "./img/propulsion/flight-closure.jpg" alt="flight closure">
+            </div>
+            <div class="right-col">
+                <h4>FLIGHT CLOSURE</h4>
+                <p>
+                    Last but certainly not least, this is the flight closure which is used for the launch at IREC. It is similar to the hydrostatic closure but instead of a through central hole, it has a blind hole, tapped for a 1/4" eye-bolt for extraction of the closure from the case.
+                </p>
+                <p>
+                    Due to the sheer size of these closures, we inevitably have to flip them to machine the other side on the lathe, which requires a lot of careful indication to ensure concentricity. This is of course room for error, which I learned the hard way when I took off 15 thou too much after flipping the part. Fortunately, this was not a critical dimension, as the O-ring groove could be adjusted to account for this.
+                </p>
+            </div>
+        </div>
+
+        <div class="nozzle-carrier segment flex-row">
+            <div class="left-col">
+                <h4>NOZZLE CARRIER</h4>
+                <p>
+                    This nozzle carrier is used to retain the graphite nozzle in the motor. The O-ring grooves and radial holes are similar to the closures. The center bore is drilled out using increasing drill bits to 2.5" then bored with a boring bar. The bevel is then machined with the compound slide.
+                </p>
+                <p>The story behind this part is too long to be included here, but in short, this whole piece was designed and machined all in the span of 5 days. Machining this was a wild ride - 3 of us taking shifts, 8 hours a day in the machine shop in the middle of midterm season, and we managed to finish the part in just over 2 days. 
+                </p>
+                <p id = "context">(For context, all the other closures were finished over the course of 2-3 weeks over the weekends)</p>
+            </div>
+            <div class="right-img">
+                <img src = "./img/propulsion/washer-2.jpg" alt="nozz carrier">
+            </div>
+        </div>
+
+        <div class="grains segment flex-row">
+            <div class="left-img">
+                <img src = "./img/propulsion/grains.jpg" alt="grains">
+            </div>
+            <div class="right-col">
+                <h4>PROPELLANT GRAINS</h4>
+                <p>
+                    This was our second year developing our SRAD <a href="https://en.wikipedia.org/wiki/Ammonium_perchlorate_composite_propellant" target="_blank">APCP</a> formula, and the first time for a 30k flight. The motor has 4 stepped ID grains to prevent erosive burning, and the grains are all mixed and cast from raw ingredients by the propulsion team. The motor is reloadable, so we casted 8 grains in total, with 4 for the static fire and 4 for the flight. 
+                </p>
+                <p>The photo shows our casting setup. We use a KitchenAid to help mix the propellant. Two packed grains in mandrels covered in saran wrap are visible in the foreground.</p>
+            </div>
+        </div>
+
+        <div class="stand segment flex-row">
+            <div class="left-col">
+                <h4>TEST STAND</h4>
+                <p>
+                    The test stand is used to hold the motor during the static fire. It is designed to withstand the forces generated during the tests, and includes a load cell to measure thrust.
+                </p>
+                <p>
+                    The frame of the stand is constructed out of 80/20 1515 Aluminum extrusion and designed by me, using Onshape's Frame feature. The stand is designed to be modular for transport and adaptable to different motor sizes up to 7.5" OD. The wide legs prevent tipping over and can be weighed down with sandbags. We also included bolts where the stand can be staked down to the ground with steel cables.
+                </p>
+            </div>
+            <div class="right-img">
+                <img src = "./img/propulsion/stand.jpg" alt="test stand">
+            </div>
+        </div>
+
+
+        <div class="screen-segment flex-row shf">
+            <div class="left-img"></div>
+            <h3>Static Fire</h3>
+            <div class="right-img"></div>
+        </div>
+
+        <div class="shf-body segment flex-row">
+            <div class="component-cards">
+                <div class="team-card">
+                    <div class="card-text">
+                        <h5>Team @ Bayboro test site</h5>
+                    </div>
+                </div>
+                <div class="fix-card">
+                    <div class="card-text">
+                        <h5>Field repair!</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="mid-col flex-col">
+                <p>
+                    After months of design, machining, and assembly, we finally had a full motor. Now we had one week until the deadline to perform a test fire at the Bayboro, NC test site. 
+                </p>
+                <p>
+                    This is make or break. A failed test fire would leave us with no time to remake the motor, and we would not be able to launch at IREC. We had to make sure everything was perfect.
+                </p>
+                <p>
+                    However, not everything was smooth sailing. During setup, our LabView DAQ hardware overheated and could not be powered on. Without test burn data, we would not pass safety checks and not allowed to launch. After some quick troubleshooting, I was able to trace the issue to a faulty power supply, and luckily we brought a DC bench power supply, which we used to bypass the onboard PSU with some VERY makeshift wiring and handywork. We did not have the right connectors, so I had to bend the wires into a tiny loop to fit onto the terminals, and secured everything with masking tape. It was not pretty, but it worked.
+                </p>
+                <p>After all the hard work, the test fire was a success. The motor performed nominally, and we got all the data we needed, and were good for launch at IREC.
+                </p>
+                <a href="propulsion.html" class="hover-note">Scroll to top for static fire footage</a>
+            </div>
+            <div class="component-cards">
+                <div class="pose-card">
+                    <div class="card-text">
+                        <h5>Me with the motor!</h5>
+                    </div>
+                </div>
+                <div class="burn-card">
+                    <div class="card-text">
+                        <h5>Beautiful blue flame</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-segment flex-row irec25">
+            <div class="left-img"></div>
+            <h3>IREC 2025</h3>
+            <div class="right-img"></div>
+        </div>
+        <div class="irec-body segment flex-row">
+            <div class="left-col">
+                <p>
+                    The IREC 2025 launch was the culmination of our effort. The motor burn was nominal and the rocket demonstrated good off-the-rail stability. However, a structural event as the rocket approached max q led to loss of the fins and causing overall vehicle breakup. The motor kept burning and landed ballistically. Despite this, we recovered all components, and the team is incredibly proud of the work that went into this vehicle - from design to launch.
+                </p>
+            </div>
+            <div class="right-vid">
+                <video autoplay muted loop>
+                <source src="./img/irec25/irec25launch.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            </div>
+        </div>
+    </main>
+
+    <section class="photo-grid-parallax">
+        <div class="horizontal-gallery" id="gallery1">
+            <img src="img/propulsion/initials.JPG" alt="">
+            <img src="img/propulsion/machine_timelapse.gif" alt="">
+            <img src="img/propulsion/machine.jpg" alt="">
+        </div>
+        <div class="horizontal-gallery" id="gallery2">
+            <img src="img/propulsion/shf-closure.jpg" alt="">
+            <img src="img/propulsion/grain-1.JPG" alt="">
+            <img src="img/propulsion/shf-closure-2.jpg" alt="">
+            <img src="img/propulsion/washer-wip.jpg" alt="">
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Jack Do
+    </footer>
+</body>
+
+
+
+
+
+
+
+        

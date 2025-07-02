@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack Do Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="finsight-style.css" />
+</head>
+
+<body>
+    <nav class="compact-nav" id="static-nav">
+        <div class="nav-title"><a href="index.html">Jack Do</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="top-splash">
+            <img src="./img/finsight/finsight-splash.png">
+        </div>
+
+        <header class="top-header">
+            <h1 class="top-title">FINSIGHT V2</h1>
+            <h2 class="top-subtitle">IN-FLIGHT FIN FLUTTER DATA ACQUISITION SYSTEM</h2>
+        </header>
+
+        <h3>What is FINSIGHT?</h3>
+        <div class="intro screen-segment flex-row">
+            <div class="left-col">
+                <p>
+                    FINSIGHT V2 is a continuation of Duke AERO's FINSIGHT project, with the goal of characterizing fin loading & flutter during flight, using sensors embedded within the fin structure. 
+                </p>
+                <p>
+                    While the original FINSIGHT employed traditional strain gauges for a low profile design, FINSIGHT V2 uses a novel approach with MEMS accelerometers to achieve a larger measurement range and distinguish higher frequency flutter modes.
+                </p>
+                <p>
+                    I served as the project lead for FINSIGHT V2 during my freshman year, overseeing the design, testing, and integration of the system.
+                </p>
+            </div>
+            <div class="right-img">
+                <img src="./img/finsight/flutter.gif" alt="Fin flutter gif">
+            </div>
+        </div>
+        <div class="statement">
+            Ultimately, FINSIGHT data will help inform and improve our fin manufacturing processes, as well as our understanding of fin flutter on high-powered rockets.
+        </div>
+
+        <h3>Accelerometers</h3>
+        <div class="accel screen-segment flex-row">
+            <div class="left-img">
+                <img src = "./img/finsight/accel.png" alt="Accelerometer">
+            </div>
+            <div class="right-col">
+                <p>
+                    The accelerometer chosen is the <a href="https://www.st.com/resource/en/datasheet/lis2dtw12.pdf" target="_blank">LIS2DTW12TR</a>, a 2x2x0.7 mm ±16g MEMS accelerometer, selected for its compact size, thin profile, and low power consumption. Its thin profile allows it to be embedded within the fin structure. The LIS2DTW12TR also offers high sensitivity and a wide measurement range, enables capturing both low-frequency structural vibrations and high-frequency flutter.
+                </p>
+                <p>
+                    Each fin contains 8 accelerometers, strategically positioned at locations of antinodes and nodes of the flutter modes. This ensures the system can capture the complex flutter patterns during flight. The use of multiple sensors per fin enables redundancy and provides richer data for post-flight analysis.
+                </p>
+            </div>
+        </div>
+
+        <h3>Dual-layer PCB design</h3>
+        <div class="dual-layer screen-segment flex-row">
+            <div class="left-img">
+                <img src = "./img/finsight/accel3.jpg" alt="dual-layer">
+            </div>
+
+            <div class="mid-col">
+                <p>The accelerometers surface-mounted onto a 0.016" thin flexible PCB layer to capture the fin's natural vibration modes. However, our fin composite layup process requires a flat surface for the carbon fiber layers, and the accelerometers' thickness must not intefere with this. To accomodate this, I came up with a dual-layer design, with an overlay cover of G10 with the same thickness as the accelerometer. The accelerometers will sit flush within cutouts in the G10, and the two layers will be bonded together with Epoxy.</p>
+                <p>The image to the right shows the layers of the fin, designed by Linn Tjornhom. The accelerometers are placed on one side of the fin, off-midline to better capture the vibrations.</p>
+            </div>
+
+            <div class="right-img">
+                <img src = "./img/finsight/layers.png" alt="layers">
+            </div>
+        </div>
+        <div class="finished-fin">
+            <img src="./img/finsight/full-fin.jpg" alt="finished fin">
+            <figcaption>The finished flex PCB with the accelerometers.</figcaption>
+        </div>
+        <h3>The Reef</h3>
+        <div class="reef-grid screen-segment">
+            <div class="reef-item">
+                <img src="./img/finsight/reef-1.png" alt="REEF image 1">
+            </div>
+            <div class="reef-item reef-text">
+                <p>
+                Vibration data from all three fins are collected by a centralized data acquisition system known as the Reef. It serves as the core hub for sensing and logging in-flight structural dynamics.
+                </p>
+
+                <p>
+                The Reef is controlled by a Teensy 4.1 and uses three multiplexers to read data from 24 accelerometers embedded across the 3 fins. 20-pin IDC cables connect each fin to the Reef, allowing for easy setup during testing and integration.
+                </p>
+
+                <p>
+                Data is stored on a 1GB flash chip connected to the Teensy and powered by a compact 3.7V Li-Ion battery and a screw switch, making the system fully self-contained and flight-ready.
+                </p>
+            </div>
+            <div class="reef-item">
+                <img src="./img/finsight/reef-2.jpg" alt="REEF image 2">
+            </div>
+            <div class="reef-item">
+                <img src="./img/finsight/reef-3.png" alt="REEF image 3">
+            </div>
+            
+        </div>
+        <h3>System Integration</h3>
+        <div class="intg-grid  screen-segment">
+            <div class="intg-item intg-text">
+                <p>The choice of a minimum-diameter rocket means the Reef cannot be mounted near the fins, so it has to be mounted in the bottom housing of the airbrakes, just above the motor. </p>
+                <p>This means that cables need to run from the fins, along the outside of the motor body tube, then through the body tube to inside the airbrakes. </p>
+                <p>This presents a challenge in terms of aerodynamic concerns and system integration, and required me to collaborate with multiple responsible subteams, from Propulsion, Structures, Aero Sims to Avionics.
+                </p>
+            </div>
+            <div class="intg-item">
+                <img src="./img/finsight/intg-1.png" alt="Intg image 1">
+            </div>
+            <div class="intg-item">
+                <img src="./img/finsight/intg-2.png" alt="Intg image 2">
+            </div>
+            <div class="intg-item">
+                <img src="./img/finsight/intg-3.png" alt="Intg image 3">
+            </div>
+            
+        </div>
+        <h3>Data Visualization</h3>
+        <div class="visual-grid  screen-segment">
+            <div class="visual-item">
+                <img src="./img/finsight/vis-1.gif" alt="Visualization 1">
+            </div>
+            <div class="visual-item vis-text">
+                <p>
+                    To process and visualizse the accelerometer's local acceleration into overall fin strain and flutter modes, I wrote a MATLAB script to animate the fin’s motion from flight data. The script loads CSV files from each test, integrates the accelerometer signals twice to estimate displacement, and reconstructs the fin’s shape over time using each sensor’s position.
+                </p>
+                <p>
+                    It draws a 3D plot of the grid of 8 sensors per fin and updating their positions for each frame. This lets us see the fin’s vibration and flutter modes as they happened in flight, helping us spot critical events and improve our designs.
+                </p>
+                </p>
+            </div>
+            <div class="visual-item">
+                <img src="./img/finsight/vis-2.gif" alt="Visualization 2">
+            </div>
+            <div class="visual-item">
+                <img src="./img/finsight/vis-3.gif" alt="Visualization 3">
+            </div>
+            
+        </div>
+    </main>
+    
+    <section class="photo-grid-parallax">
+        <div class="horizontal-gallery" id="gallery1">
+            <img src="img/finsight/reef-render.png" alt="">
+            <img src="img/finsight/i2c-chain.png" alt="">
+            <img src="img/finsight/reef-pcb.png" alt="">
+        </div>
+        <div class="horizontal-gallery" id="gallery2">
+            <img src="img/finsight/connector.jpg" alt="">
+            <img src="img/finsight/fresh-reef.jpg" alt="">
+            <img src="img/finsight/bt-cable.jpg" alt="">
+            <img src="img/finsight/accel2.png" alt="">
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Jack Do
+    </footer>
+</body>

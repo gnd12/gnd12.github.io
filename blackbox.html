@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack Do Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="blackbox-style.css" />
+
+</head>
+
+<body>
+    <nav class="compact-nav" id="static-nav">
+        <div class="nav-title"><a href="index.html">Jack Do</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="top-splash">
+            <img src="./img/bbox/bbox-splash.gif">
+        </div>
+        <header class="top-header">
+            <h1 class="top-title">BLACK BOX</h1>
+            <h2 class="top-subtitle">DUKE AERO'S IP-67 RATED, SHOCK-RESISTANT FLIGHT TELEMETRY RECORDER</h2>
+        </header>
+
+        <div class="screen-segment flex-row mech-design">
+            <div class="left-img"></div>
+            <h3>Mechanical Design</h3>
+            <div class="right-img"></div>
+        </div>
+
+        <div class="screen-segment flex-row housing">
+            <div class="left-img"></div>
+            <div class="mid-col">
+                <h4>6061 ALUMINUM HOUSING</h4>
+                <p>The protective housing was fully designed by me, consisting of two parts — the lid and the body — made of 6061 Aluminum for its ideal balance of strength, weight, and machinability.</p>
+                <p>The interface between body and the lid are precision-toleranced to be a watertight snap fit. The bottom of the body include reinforcement ribs to prevent buckling. The depth and contours of the body pockets are designed to be manufacturable taking into account the available endmills we have.</p>
+                <p>After finalizing the CAD and CAM, the parts were machined by Cameron Galibois on the Tormach CNC mill.</p>
+                <p class="hover-note">Hover over the parts to see the order of operations.</p>
+            </div>
+            <div class="right-img"></div>
+        </div>
+
+        <div class="segment flex-row fea">
+            <div class="left-col">
+                <h4>STRENGTH ANALYSIS</h4>
+                <p>Before we could manufacture the housing, the design first had to be verified. The loading case was based on the worst-case scenario: the blackbox impacting the ground head-on at Mach 1.7 (our rocket’s max velocity) — an extremely unlikely event, but a useful upper bound. This load was calculated to be roughly 960 kPa, which was rounded up to 1 MPa.</p>
+                <p>An FEA simulation was then performed on ANSYS, applying this load separately to each of the three primary faces, with fixed constraints on the opposite face. The lowest safety factor recorded was 1.62, which passes our design requirement of a minimum FoS of 1.5.</p>
+                
+            </div>
+            <div class="img">
+                <div class="mid-img">
+                    <img src="./img/bbox/bbox-fea-1.png">
+                    <img src="./img/bbox/bbox-fea-2.png">
+                </div>
+                <div class="right-img">
+                    <img src="./img/bbox/bbox-fea-3.png">
+                    <img src="./img/bbox/bbox-fea-4.png">
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="screen-segment flex-row finished-housing">
+            <img src="./img/bbox/bbox-finished-housing.png">
+        </div>
+        -->
+        <div class="segment flex-row shock-suspension">
+            <div class="left-img">
+                <img src="./img/bbox/bbox-suspension.png">
+            </div>
+            <div class="right-col">
+                <h4>SHOCK SUSPENSION SYSTEM</h4>
+                <p>To mitigate the transmission of shock to the main PCB within the blackbox, the board is not mounted directly to the housing. Instead, it is suspended using a dual-spring isolation system. This configuration ensures that impact forces from collisions are not directly imparted to the PCB, but are instead gradually dissipated through controlled oscillations of the suspension mechanism.</p>
+            </div>
+        </div>
+
+        <div class="screen-segment flex-row elec-design">
+            <div class="left-img"></div>
+            <h3>Electronics System Design</h3>
+            <div class="right-img"></div>
+        </div>
+
+        <div class="screen-segment flex-row supercap">
+            <div class="left-col">
+                <h4>SUPERCAPACITORS</h4>
+                <p>The black box is powered by an external 3.7V Li-Ion battery located within the avionics bay. However, reliance on external power introduces the risk of data loss in the event of a rapid unscheduled disassembly (RUD). Therefore, a simple and reliable internal backup power system is required.</p>
+
+                <p><b>Our solution? Supercapacitors.</b></p>
+
+                <p> Two 5V, 2.5F supercapacitors are chosen and configured to be quick-charged from primary power in less than 30 seconds of powering on, using a dedicated constant current charging circuit. In the event of primary power failure, a diode ORing configuration ensures automatic switchover to the backup supercapacitors. The supercapacitors store sufficient energy to power the system for approximately 30 seconds — enough time to flush telemetry data to non-volatile flash memory.</p>
+            </div>
+            <div class="right-img">
+                <img src="./img/bbox/bbox-power-schematic.png">
+                <img src="./img/bbox/bbox-supercaps.png">
+            </div>
+        </div>
+
+        <div class="segment flex-row teensy">
+            <div class="left-img">
+                <img src="./img/bbox/bbox-teensy.png">
+                <img src="./img/bbox/bbox-flash.jpg">
+            </div>
+            <div class="right-col">
+                <h4>TEENSY 4.1</h4>
+                <p>The chosen microcontroller for the black box was the Teensy 4.1, due to its reliability and cross-compatibility with other avionics systems of Duke AERO.</p>
+                <p>An additional flash chip was soldered on to provide an extra 1GB of storage capabilities. This is plenty sufficient for flight telemetry purposes.</p>
+            </div>
+        </div>
+
+        <div class="segment flex-row marco-polo">
+            <div class="left-col">
+                <h4>MARCO POLO RADIO TRACKER</h4>
+                <p>To ensure post-flight recoverability in the event of a rapid unscheduled disassembly (RUD) or signal loss, a standalone radio beacon is integrated into the blackbox. We selected the Marco Polo tracking system due to its self-contained operation, long-range directional tracking, and proven reliability in unmanned aerial systems (UAS). Unlike GPS-based trackers, it does not rely on cellular or satellite infrastructure, making it ideal for remote recovery scenarios.</p>
+            </div>
+            <div class="right-img">
+                <img src="./img/bbox/bbox-marco-polo.png">
+            </div>
+        </div>
+
+        <div class="statement-pics flex-col screen-segment">
+            <div class="statement">
+                <p>After a successful testing campaign - where we verified the black box’s ability to record flight telemetry and withstand high-shock conditions - it was ready for its maiden flight aboard Perseus, Duke AERO’s 30,000 ft rocket at the 2025 International Rocket Engineering Competition (IREC).</p>
+            </div>
+            <div class="pics-sub flex-col">
+                <div class="pics flex-row">
+                    <img src="./img/bbox/final.JPG" alt="Fully integrated black box">
+                    <img src="./img/bbox/fullbox.JPG" alt="Black box internal">
+                    <img src="./img/bbox/lid-finished.jpg" alt="Machined-lid">
+                </div>
+                <div class="hover-note">The finished blackbox, internal, and lid.</div>
+            </div>
+            
+        </div>
+
+        <div class="screen-segment flex-row irec25">
+            <div class="left-img"></div>
+            <h3>IREC 2025</h3>
+            <div class="right-img"></div>
+        </div>
+        <div class="irec-body segment flex-row">
+            <div class="left-col">
+                <p>
+                    The IREC 2025 launch was the culmination of our effort. The motor burn was nominal and the rocket demonstrated good off-the-rail stability. However, a structural event as the rocket approached max q led to loss of the fins and causing overall vehicle breakup. The motor kept burning and landed ballistically. 
+                </p>
+                <p>
+                    Despite this, we recovered all components, where the Marco Polo tracker proved incredibly helpful in locating the avionics bay in the middle of the desert. Overall the team is incredibly proud of the work that went into this vehicle - from design to launch.
+                </p>
+            </div>
+            <div class="right-vid">
+                <video autoplay muted loop>
+                <source src="./img/irec25/irec25launch.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            </div>
+        </div>
+    </main>
+
+
+    <section class="photo-grid-parallax">
+        <div class="horizontal-gallery" id="gallery1">
+            <img src="img/bbox/bbox-diode-OR.png" alt="">
+            <img src="img/bbox/bbox-pcb-render.png" alt="">
+            <img src="img/bbox/bbox-cam-machine.jpg" alt="">
+        </div>
+        <div class="horizontal-gallery" id="gallery2">
+            <img src="img/bbox/bbox-wip.jpg" alt="">
+            <img src="img/bbox/bbox-housing-finished-1.png" alt="">
+            <img src="img/bbox/bbox-section.png" alt="">
+            <img src="img/bbox/bbox-pcb.png" alt="">
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Jack Do
+    </footer>
+</body>

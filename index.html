@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack Do Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    
+
+
+</head>
+
+<body>
+
+    <header id="main-header">
+        <h1>Jack Do</h1>
+        <div class="subheading">Mechanical Engineering & Computer Science – Durham, NC</div>
+    </header>
+
+    <nav class="compact-nav" id="sticky-nav">
+        <div class="nav-title">Jack Do</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <section class="about">
+            <h2>ABOUT</h2>
+            <p>I’m a mechanical & aerospace engineering and computer science student at Duke University. <br> I build
+                things that move really fast, think really hard, or simulate reality — from rockets to VR tools.</p>
+            <p>Wanna learn more? Check out my formal resume <a href="Resume-03-25.pdf" target="_blank">here</a></p>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+
+            <div class="project-grid">
+                <a href="canards.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="image-wrapper" >
+                            <img src="./img/canard/canard-main.png" alt="Canards!">
+                        </div>
+                        <h3>CANARD SYSTEM</h3>
+                        <p>ROCKET AERODYNAMIC ROLL CONTROL</p>
+                    </div>
+                </a>
+
+                <a href="finsight.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="image-wrapper">
+                            <img src="./img/finsight/finsight-main.png" alt="FINsight 25">
+                        </div>
+                        <h3>FINSIGHT V2</h3>
+                        <p>FIN FLUTTER MEASUREMENT SYSTEM</p>
+                    </div>
+                </a>
+
+                <a href="blackbox.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="image-wrapper">
+                            <img src="./img/bbox/bbox-main.png" alt="blackbox 25 baby">
+                        </div>
+                        <h3>BLACK BOX</h3>
+                        <p>FLIGHT TELEMETRY DATA LOGGING</p>
+                    </div>
+                </a>
+
+                <a href="propulsion.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="image-wrapper">
+                            <img src="./img/propulsion/propulsion-main.jpg" alt="propulsion 25">
+                        </div>
+                        <h3>2025 PROPULSION</h3>
+                        <p>REALLY BIG ROCKET MOTOR</p>
+                    </div>
+                </a>
+
+                <a href="tank-weighing.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="image-wrapper">
+                            <img src="./img/tankweigh/tankweigh-main.png" alt="tank weighing">
+                        </div>
+                        <h3>TANK WEIGHING TEST STAND</h3>
+                        <p>KEROSENE & NOX DYNAMIC DATA LOGGING</p>
+                    </div>
+                </a>
+
+                <!-- <a href="vr-peripheral.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="image-wrapper">
+                            <img src="https://via.placeholder.com/600x400" alt="VR Peripheral">
+                        </div>
+                        <h3>MODULAR VR PERIPHERAL</h3>
+                        <p>Plug-and-play VR controller with Unity and embedded systems integration.</p>
+                    </div>
+                </a>
+
+                <a href="biophilic-dome.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="image-wrapper">
+                            <img src="https://via.placeholder.com/600x400" alt="Geodesic Dome?">
+                        </div>
+                        <h3>Proposal: Biophilic Dome in Phoenix</h3>
+                        <p>Conceptual geodesic dome for climate-controlled greenery in desert Arizona.</p>
+                    </div>
+                </a> -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Contact: jack.do@duke.edu</p>
+    </footer>
+
+
+    <!-- Scroll-based header script -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const stickyNav = document.getElementById('sticky-nav');
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 150) {
+                stickyNav.classList.add('active');
+                header.style.opacity = '0';
+            } else {
+                stickyNav.classList.remove('active');
+                header.style.opacity = '1';
+            }
+        });
+    </script>
+</body>
+
+</body>
+
+</html>

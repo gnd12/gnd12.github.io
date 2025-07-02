@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    
+    background-color: white;
+    padding-top: 2.5rem;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #000000;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    /* Base black background */
+}
+
+
+#static-nav {
+    font-family: 'Josefin Sans', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(0, 0, 0);
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.compact-nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+.top-splash {
+    width: 100%;
+    padding-top: 0rem;
+    overflow: hidden;
+
+    /* Prevent image overflow */
+}
+
+.top-splash img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+header {
+    font-family: 'VT323', serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-title {
+    padding: 0;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    /* Adjust this value as needed */
+}
+
+.top-subtitle {
+    margin-top: 1rem;
+    letter-spacing: 0.3rem;;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.screen-segment {
+    align-self: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+.segment {
+    align-self: center;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+/* For smaller screens: let height grow with content */
+@media (max-width: 768px) {
+    .screen-segment {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+}
+
+.statement {
+    background-color: rgba(13, 14, 83);
+    margin: 0 -2.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    opacity: 1;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+
+.hover-note {
+    font-family: "VT323", serif;
+    font-size: 1.5rem;;
+}
+
+b {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-family: 'VT323', serif;
+    font-size: 5rem;
+    letter-spacing: 0.3rem;
+    line-height: 5rem;
+    color: white;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+    text-align: center;
+    background-color: rgba(13, 14, 83);
+    padding: 1.5rem;
+}
+h4 {
+    font-family: 'VT323', serif;
+    font-size: 4rem;
+    
+    color: black;
+    letter-spacing: 0.3rem;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    text-align: center;
+    padding-bottom: 0.75rem;
+    display: inline-block; /* key line */
+    line-height: 4rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+    padding-top: 0;
+    margin: 1rem;
+}
+
+.mech-design .left-img {
+    background-image: url('./img/bbox/bbox-Stack1.png');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+.mech-design .left-img:hover {
+    background-image: url('./img/bbox/bbox-stack2.png');
+}
+
+.mech-design .right-img {
+    background-image: url('./img/bbox/bbox-stack3.png');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+.mech-design .right-img:hover {
+    background-image: url('./img/bbox/bbox-stack4.png');
+}
+
+.housing .left-img {
+    background-image: url('./img/bbox/bbox-lid-cam.png');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+
+.housing .left-img:hover {
+    background-image: url('./img/bbox/bbox-lid-hover.gif');
+}
+.housing .mid-col {
+    width: 70vw;
+    text-align: center;
+    margin: 1rem;
+    
+}
+.housing .right-img {
+    background-image: url('./img/bbox/bbox-body-cam.png');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+
+.housing .right-img:hover {
+    background-image: url('./img/bbox/bbox-body-hover.gif');
+}
+
+.fea {
+    margin-left: 2rem;
+    justify-content: space-around;
+}
+
+
+.fea .left-col {
+    text-align: center;
+    width: 35vw;
+}
+
+.fea .img {
+    display: flex;
+    flex-direction: row;
+}
+.fea .right-img {
+    width: 25vw;
+}
+.fea .mid-img {
+    width: 25vw;
+}
+
+.fea img {
+    height:  260px;
+    width: 350px;
+}
+
+.shock-suspension {
+    justify-content: space-evenly;
+}
+.shock-suspension .left-img {
+    padding: 2rem;
+}
+.shock-suspension .right-col {
+    width: 600px;
+    padding: 2rem;
+    text-align: center;
+    padding: 5rem;
+}
+.shock-suspension .left-img img {
+    height: 90vh;
+}
+
+.elec-design .left-img {
+    background-image: url('./img/bbox/bbox-elec-stack1.png');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+.elec-design .left-img:hover {
+    background-image: url('./img/bbox/bbox-elec-stack2.png');
+}
+
+.elec-design .right-img {
+    background-image: url('./img/bbox/bbox-elec-stack3.png');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+.elec-design .right-img:hover {
+    background-image: url('./img/bbox/bbox-elec-stack4.png');
+}
+
+.supercap .left-col {
+    width: 450px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.supercap .right-img {
+    width: 500px;
+    
+}
+
+.supercap .right-img img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 1rem;
+}
+
+.teensy .left-img {
+    width: 350px;
+}
+.teensy .left-img img {
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+    margin: 1rem;
+}
+.teensy .right-col {
+    width: 500px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.marco-polo .left-col {
+    width: 550px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.marco-polo .right-img {
+    width: 400px;
+    padding: 1rem;
+}
+
+.marco-polo .right-img img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 1rem;
+}
+
+.statement-pics {
+    justify-content: space-evenly;
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+.statement-pics img {
+    width: 450px;
+}
+
+.pics-sub {
+    text-align: center;
+}
+
+.irec25 .left-img {
+    background-image: url('./img/irec25/stack3.png');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+.irec25 .left-img:hover {
+    background-image: url('./img/irec25/stack4.png');
+}
+
+.irec25 .right-img {
+    background-image: url('./img/irec25/stack1.png');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+.irec25 .right-img:hover {
+    background-image: url('./img/irec25/stack2.png');
+}
+
+.irec-body video {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.irec-body .left-col {
+    width: 450px;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.photo-grid-parallax {
+    position: relative;
+    height: 90vh; 
+    pointer-events: none
+}
+
+.horizontal-gallery {
+    position: fixed;
+    width: 100vw;
+    height: 45vh;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    pointer-events: none;
+    
+}
+#gallery1 {
+    top: 10vh;
+}
+
+#gallery2 {
+    top: 50vh;
+}
+
+.horizontal-gallery img {  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: all;
+}
+
+.horizontal-gallery img:hover {
+    filter: brightness(0.7);
+    
+    transition: 0.3s ease-in-out;
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    color: white;
+
+    background-color: rgba(13, 14, 83);
+    /* or use a solid color: background-color: #222; */
+    padding: 1rem;
+
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
