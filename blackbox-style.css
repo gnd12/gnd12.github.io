@@ -188,7 +188,7 @@ h5 {
 }
 
 .mech-design .left-img {
-    background-image: url('./img/bbox/bbox-Stack1.png');
+    background-image: url('./img/bbox/bbox-Stack1.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -197,11 +197,11 @@ h5 {
     background-position: center;
 }
 .mech-design .left-img:hover {
-    background-image: url('./img/bbox/bbox-stack2.png');
+    background-image: url('./img/bbox/bbox-stack2.jpg');
 }
 
 .mech-design .right-img {
-    background-image: url('./img/bbox/bbox-stack3.png');
+    background-image: url('./img/bbox/bbox-stack3.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -210,11 +210,11 @@ h5 {
     background-position: center;
 }
 .mech-design .right-img:hover {
-    background-image: url('./img/bbox/bbox-stack4.png');
+    background-image: url('./img/bbox/bbox-stack4.jpg');
 }
 
 .housing .left-img {
-    background-image: url('./img/bbox/bbox-lid-cam.png');
+    background-image: url('./img/bbox/bbox-lid-cam.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -233,7 +233,7 @@ h5 {
     
 }
 .housing .right-img {
-    background-image: url('./img/bbox/bbox-body-cam.png');
+    background-image: url('./img/bbox/bbox-body-cam.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -290,7 +290,7 @@ h5 {
 }
 
 .elec-design .left-img {
-    background-image: url('./img/bbox/bbox-elec-stack1.png');
+    background-image: url('./img/bbox/bbox-elec-stack1.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -299,11 +299,11 @@ h5 {
     background-position: center;
 }
 .elec-design .left-img:hover {
-    background-image: url('./img/bbox/bbox-elec-stack2.png');
+    background-image: url('./img/bbox/bbox-elec-stack2.jpg');
 }
 
 .elec-design .right-img {
-    background-image: url('./img/bbox/bbox-elec-stack3.png');
+    background-image: url('./img/bbox/bbox-elec-stack3.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -312,7 +312,7 @@ h5 {
     background-position: center;
 }
 .elec-design .right-img:hover {
-    background-image: url('./img/bbox/bbox-elec-stack4.png');
+    background-image: url('./img/bbox/bbox-elec-stack4.jpg');
 }
 
 .supercap .left-col {
@@ -380,7 +380,7 @@ h5 {
 }
 
 .irec25 .left-img {
-    background-image: url('./img/irec25/stack3.png');
+    background-image: url('./img/irec25/stack3.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -389,11 +389,11 @@ h5 {
     background-position: center;
 }
 .irec25 .left-img:hover {
-    background-image: url('./img/irec25/stack4.png');
+    background-image: url('./img/irec25/stack4.jpg');
 }
 
 .irec25 .right-img {
-    background-image: url('./img/irec25/stack1.png');
+    background-image: url('./img/irec25/stack1.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -402,7 +402,7 @@ h5 {
     background-position: center;
 }
 .irec25 .right-img:hover {
-    background-image: url('./img/irec25/stack2.png');
+    background-image: url('./img/irec25/stack2.jpg');
 }
 
 .irec-body video {

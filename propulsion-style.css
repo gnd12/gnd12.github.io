@@ -188,7 +188,7 @@ h5 {
 }
 
 .manufacturing .left-img {
-    background-image: url('./img/propulsion/manu-stack3.png');
+    background-image: url('./img/propulsion/manu-stack3.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -197,11 +197,11 @@ h5 {
     background-position: center;
 }
 .manufacturing .left-img:hover {
-    background-image: url('./img/propulsion/manu-stack4.png');
+    background-image: url('./img/propulsion/manu-stack4.jpg');
 }
 
 .manufacturing .right-img {
-    background-image: url('./img/propulsion/manu-stack1.png');
+    background-image: url('./img/propulsion/manu-stack1.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -210,7 +210,7 @@ h5 {
     background-position: center;
 }
 .manufacturing .right-img:hover {
-    background-image: url('./img/propulsion/manu-stack2.png');
+    background-image: url('./img/propulsion/manu-stack2.jpg');
 }
 
 
@@ -281,7 +281,7 @@ h5 {
 
 
 .shf .left-img {
-    background-image: url('./img/propulsion/shf-stack1.png');
+    background-image: url('./img/propulsion/shf-stack1.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -290,11 +290,11 @@ h5 {
     background-position: center;
 }
 .shf .left-img:hover {
-    background-image: url('./img/propulsion/shf-stack2.png');
+    background-image: url('./img/propulsion/shf-stack2.jpg');
 }
 
 .shf .right-img {
-    background-image: url('./img/propulsion/shf-stack3.png');
+    background-image: url('./img/propulsion/shf-stack3.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -303,7 +303,7 @@ h5 {
     background-position: center;
 }
 .shf .right-img:hover {
-    background-image: url('./img/propulsion/shf-stack4.png');
+    background-image: url('./img/propulsion/shf-stack4.jpg');
 }
 .component-cards {
     display: flex;
@@ -391,7 +391,7 @@ h5 {
 }
 
 .irec25 .left-img {
-    background-image: url('./img/irec25/stack3.png');
+    background-image: url('./img/irec25/stack3.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -400,11 +400,11 @@ h5 {
     background-position: center;
 }
 .irec25 .left-img:hover {
-    background-image: url('./img/irec25/stack4.png');
+    background-image: url('./img/irec25/stack4.jpg');
 }
 
 .irec25 .right-img {
-    background-image: url('./img/irec25/stack1.png');
+    background-image: url('./img/irec25/stack1.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -413,7 +413,7 @@ h5 {
     background-position: center;
 }
 .irec25 .right-img:hover {
-    background-image: url('./img/irec25/stack2.png');
+    background-image: url('./img/irec25/stack2.jpg');
 }
 
 .irec-body video {

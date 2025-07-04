@@ -272,7 +272,7 @@ h3 {
     background-image: url("./img/canard/canard-gears.gif");
 }
 .canard-card {
-    background-image: url("./img/canard/canard-blade.png");
+    background-image: url("./img/canard/canard-blade.jpg");
 }
 
 .card-text {
@@ -353,7 +353,7 @@ h5 {
     margin-bottom: 2rem;
 }
 #left-column {
-    background-image: url('./img/canard/canard-pinion-shaft.png');
+    background-image: url('./img/canard/canard-pinion-shaft.jpg');
     background-repeat: no-repeat;
 }
 #left-column:hover {
@@ -502,7 +502,7 @@ b {
 
 
 .irec25 .left-img {
-    background-image: url('./img/irec25/stack3.png');
+    background-image: url('./img/irec25/stack3.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -511,11 +511,11 @@ b {
     background-position: center;
 }
 .irec25 .left-img:hover {
-    background-image: url('./img/irec25/stack4.png');
+    background-image: url('./img/irec25/stack4.jpg');
 }
 
 .irec25 .right-img {
-    background-image: url('./img/irec25/stack1.png');
+    background-image: url('./img/irec25/stack1.jpg');
     background-repeat: no-repeat;
     width: 80vw;
     max-width: 700px;
@@ -524,7 +524,7 @@ b {
     background-position: center;
 }
 .irec25 .right-img:hover {
-    background-image: url('./img/irec25/stack2.png');
+    background-image: url('./img/irec25/stack2.jpg');
 }
 
 .irec25 h4{
