@@ -1,28 +1,29 @@
 :root {
-  --shadow-color: 0deg 0% 64%;
-  --shadow-elevation-low:
-    0.1px 0.2px 0.2px hsl(var(--shadow-color) / 0.46),
-    0.1px 0.4px 0.4px -1.7px hsl(var(--shadow-color) / 0.38),
-    0.4px 0.9px 1px -3.4px hsl(var(--shadow-color) / 0.29);
-  --shadow-elevation-medium:
-    0.1px 0.2px 0.2px hsl(var(--shadow-color) / 0.48),
-    0.2px 0.6px 0.6px -1.1px hsl(var(--shadow-color) / 0.42),
-    0.7px 1.8px 1.9px -2.3px hsl(var(--shadow-color) / 0.35),
-    1.8px 4.6px 4.9px -3.4px hsl(var(--shadow-color) / 0.28);
-  --shadow-elevation-high:
-    0.1px 0.2px 0.2px hsl(var(--shadow-color) / 0.45),
-    0.4px 0.9px 1px -0.5px hsl(var(--shadow-color) / 0.42),
-    0.7px 1.8px 1.9px -1px hsl(var(--shadow-color) / 0.39),
-    1.3px 3.3px 3.5px -1.5px hsl(var(--shadow-color) / 0.36),
-    2.2px 5.7px 6px -2px hsl(var(--shadow-color) / 0.32),
-    3.7px 9.5px 10px -2.5px hsl(var(--shadow-color) / 0.29),
-    5.9px 15px 15.8px -3px hsl(var(--shadow-color) / 0.26),
-    8.9px 22.7px 24px -3.4px hsl(var(--shadow-color) / 0.23);
+    --shadow-color: 0deg 0% 64%;
+    --shadow-elevation-low:
+        0.1px 0.2px 0.2px hsl(var(--shadow-color) / 0.46),
+        0.1px 0.4px 0.4px -1.7px hsl(var(--shadow-color) / 0.38),
+        0.4px 0.9px 1px -3.4px hsl(var(--shadow-color) / 0.29);
+    --shadow-elevation-medium:
+        0.1px 0.2px 0.2px hsl(var(--shadow-color) / 0.48),
+        0.2px 0.6px 0.6px -1.1px hsl(var(--shadow-color) / 0.42),
+        0.7px 1.8px 1.9px -2.3px hsl(var(--shadow-color) / 0.35),
+        1.8px 4.6px 4.9px -3.4px hsl(var(--shadow-color) / 0.28);
+    --shadow-elevation-high:
+        0.1px 0.2px 0.2px hsl(var(--shadow-color) / 0.45),
+        0.4px 0.9px 1px -0.5px hsl(var(--shadow-color) / 0.42),
+        0.7px 1.8px 1.9px -1px hsl(var(--shadow-color) / 0.39),
+        1.3px 3.3px 3.5px -1.5px hsl(var(--shadow-color) / 0.36),
+        2.2px 5.7px 6px -2px hsl(var(--shadow-color) / 0.32),
+        3.7px 9.5px 10px -2.5px hsl(var(--shadow-color) / 0.29),
+        5.9px 15px 15.8px -3px hsl(var(--shadow-color) / 0.26),
+        8.9px 22.7px 24px -3.4px hsl(var(--shadow-color) / 0.23);
 }
 
 * {
     box-sizing: border-box;
 }
+
 
 body {
     font-family: 'Josefin Sans', sans-serif;
@@ -32,8 +33,19 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 
-    /* Base black background */
-    background-color: #ffffff;
+    /* Base white background */
+    background-image: url('./img/irec25/self-bkg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.55);
+    /* Semi-transparent white */
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -94,7 +106,7 @@ h1 {
 .subheading {
     font-size: 1.1rem;
     margin-top: 0.5rem;
-    opacity: 0.75;
+    opacity: 1;
     font-weight: 300;
 }
 
@@ -108,8 +120,10 @@ main {
 .about {
     padding: 2rem 1rem;
     margin: 0 auto;
-    width: 700px;
+    max-width: 700px;
+    width: 100%;
 }
+
 
 .about p {
     font-size: 1rem;
@@ -137,29 +151,38 @@ h2 {
 
 /* Update .project-grid to span full width */
 .project-grid {
-    column-count: 3;
-    column-gap: 3rem;
+    display: flex;
+    gap: 3rem;
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
 }
 
+/* Required for Colcade */
+.grid-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
 
 .project-card {
     overflow: hidden;
     width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     break-inside: avoid;
     display: block;
     border-radius: 15px;
     box-shadow: var(--shadow-elevation-high);
-    
+
+    background-color: white;
+
 }
 
 
 .project-card:hover {
-  transform: translateY(5px);
-  box-shadow: var(--shadow-elevation-medium);
+    transform: translateY(5px);
+    box-shadow: var(--shadow-elevation-medium);
 }
 
 .project-card img {
@@ -217,9 +240,7 @@ h2 {
     opacity: 0.6;
     line-height: 1.5rem;
     letter-spacing: 0.05rem;
-    margin: 0 auto;
-    margin-left: 1rem;
-    margin-bottom: 0.5rem;
+    margin: 0 1rem 0.5rem 1rem;
 }
 
 .project-card-link {
@@ -237,4 +258,3 @@ footer {
     opacity: 0.5;
     font-size: 0.9rem;
 }
-

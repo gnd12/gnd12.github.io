@@ -1,176 +1,370 @@
-<!-- todo:
-- change logo
-- change default pic
-- make img size smaller -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jack Do - Engineering Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jack Do - Engineering Portfolio</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
+  <!-- Load Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <link rel="prefetch" href="./img/irec25/irec25launch.mp4" />
-    <link rel="prefetch" href="./img/propulsion/shf.mp4" />
-    <link rel="prefetch" href="./img/canard/canard-splash.gif" />
-    <link rel="prefetch" href="./img/bbox/bbox-splash.gif" />
-    <link rel="prefetch" href="./img/bbox/bbox-body-hover.gif" />
-    <link rel="prefetch" href="./img/bbox/bbox-lid-hover.gif" />
-    <link rel="prefetch" href="./img/canard/past-launch.gif" />
-    <link rel="prefetch" href="./img/canard/canard-output-shaft-hover.gif" />
-    <link rel="prefetch" href="./img/canard/canard-pinion-shaft-hover.gif" />
-    <link rel="prefetch" href="./img/finsight/flutter.gif" />
-    <link rel="prefetch" href="./img/finsight/vis-1.gif" />
-    <link rel="prefetch" href="./img/finsight/vis-2.gif" />
-    <link rel="prefetch" href="./img/finsight/vis-3.gif" />
+  <!-- ✅ Corrected Critical CSS -->
+  <!-- <style>
+    *{
+      box-sizing: border-box;
+    }
 
-    <link rel="prefetch" href="./img/irec25/stack2.jpg"/>
-    <link rel="prefetch" href="./img/irec25/stack4.jpg"/>
-    <link rel="prefetch" href="./img/bbox/bbox-stack2.jpg"/>
-    <link rel="prefetch" href="./img/bbox/bbox-stack4.jpg"/>
-    <link rel="prefetch" href="./img/bbox/bbox-elec-stack2.jpg"/>
-    <link rel="prefetch" href="./img/bbox/bbox-elec-stack4.jpg"/>
-    <link rel="prefetch" href="./img/propulsion/shf-stack2.jpg"/>
-    <link rel="prefetch" href="./img/propulsion/shf-stack4.jpg"/>
-    <link rel="prefetch" href="./img/propulsion/manu-stack2.jpg"/>
-    <link rel="prefetch" href="./img/propulsion/manu-stack4.jpg"/>
+    body {
+        font-family: 'Josefin Sans', sans-serif;
+        color: #000000;
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+        overflow-x: hidden;
+
+        /* Base black background */
+        background-color: #ffffff;
+    }
+
+    header {
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 3rem 1rem;
+        text-align: center;
+        letter-spacing: 0.05rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .subheading {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      opacity: 0.75;
+      font-weight: 300;
+    }
+
+    nav {
+        font-family: 'Josefin Sans', sans-serif;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+        color: rgb(0, 0, 0);
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    color: rgb(0, 0, 0);
+    }
+
+    main {
+      padding: 1rem 1rem;
+      margin: 0;
+      width: 100%;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .about {
+      padding: 2rem 1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .about p {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+
+    h2 {
+      font-family: 'VT323', monospace;
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .project-grid {
+      column-count: 3;
+      column-gap: 2rem;
+        width: 100%;
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+    .project-card {
+        width: 100%;
+      break-inside: avoid;
+      margin-bottom: 3rem;
+      border-radius: 15px;
+      overflow: hidden;
+    display: block;
+    }
+
+    .image-wrapper img {
+       width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 0;
+    }
+
+    .project-card h3 {
+      font-family: 'VT323', sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    margin: 0.5rem auto;
+    margin-bottom: 0rem;
+    margin-left: 1rem;
+    }
+
+    .project-card p {
+      font-family: 'VT323', sans-serif;
+    font-size: 1.5rem;
+    opacity: 0.6;
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
+    margin: 0 auto;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    }
+
+    .project-card-link {
+      text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      opacity: 0.5;
+    }
+  </style>
+
+  <!-- Defer full CSS -->
+  <!-- <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript> -->
+  <link rel="stylesheet" href="style.css">
 
 
 </head>
 
 <body>
+  <header id="main-header">
+    <h1>Jack Do</h1>
+    <div class="subheading">Mechanical Engineering & Computer Science – Durham, NC</div>
+  </header>
 
-    <header id="main-header">
-        <h1>Jack Do</h1>
-        <div class="subheading">Mechanical Engineering & Computer Science – Durham, NC</div>
-    </header>
+  <nav class="compact-nav" id="sticky-nav">
+    <div class="nav-title">Jack Do</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <nav class="compact-nav" id="sticky-nav">
-        <div class="nav-title">Jack Do</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <main>
+    <section class="about">
+      <h2>ABOUT</h2>
+      <p>I’m a mechanical & aerospace engineering and computer science student at Duke University. <br>I build
+        things that move really fast, think really hard, or simulate reality — from rockets to VR tools.</p>
+      <p>Wanna learn more? Check out my formal resume <a href="Resume-03-25.pdf" target="_blank">here</a></p>
+    </section>
 
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <div id="card-pool" style="display: none;">
+        <div class="grid-col"></div>
+        <div class="grid-col"></div>
+        <div class="grid-col"></div>
 
-    <main>
-        <section class="about">
-            <h2>ABOUT</h2>
-            <p>I’m a mechanical & aerospace engineering and computer science student at Duke University. <br> I build
-                things that move really fast, think really hard, or simulate reality — from rockets to VR tools.</p>
-            <p>Wanna learn more? Check out my formal resume <a href="Resume-03-25.pdf" target="_blank">here</a></p>
-        </section>
+        <a href="canards.html" class="project-card-link" onmouseenter="preloadAssets('canard')">
+          <div class="project-card">
+            <div class="image-wrapper"><img src="./img/canard/canard-main.jpg" alt="Canards!"></div>
+            <h3>CANARD SYSTEM</h3>
+            <p>ROCKET AERODYNAMIC ROLL CONTROL</p>
+          </div>
+        </a>
 
-        <section class="projects">
-            <h2>Projects</h2>
+        <a href="blackbox.html" class="project-card-link" onmouseenter="preloadAssets('bbox')">
+          <div class="project-card">
+            <div class="image-wrapper"><img src="./img/bbox/bbox-main.jpg" alt="blackbox 25 baby"></div>
+            <h3>BLACK BOX</h3>
+            <p>FLIGHT TELEMETRY DATA LOGGING</p>
+          </div>
+        </a>
 
-            <div class="project-grid">
-                <a href="canards.html" class="project-card-link">
-                    <div class="project-card">
-                        <div class="image-wrapper" >
-                            <img src="./img/canard/canard-main.jpg" alt="Canards!">
-                        </div>
-                        <h3>CANARD SYSTEM</h3>
-                        <p>ROCKET AERODYNAMIC ROLL CONTROL</p>
-                    </div>
-                </a>
-
-                <a href="finsight.html" class="project-card-link">
-                    <div class="project-card">
-                        <div class="image-wrapper">
-                            <img src="./img/finsight/finsight-main.png" alt="FINsight 25">
-                        </div>
-                        <h3>FINSIGHT V2</h3>
-                        <p>FIN FLUTTER MEASUREMENT SYSTEM</p>
-                    </div>
-                </a>
-
-                <a href="blackbox.html" class="project-card-link">
-                    <div class="project-card">
-                        <div class="image-wrapper">
-                            <img src="./img/bbox/bbox-main.jpg" alt="blackbox 25 baby">
-                        </div>
-                        <h3>BLACK BOX</h3>
-                        <p>FLIGHT TELEMETRY DATA LOGGING</p>
-                    </div>
-                </a>
-
-                <a href="propulsion.html" class="project-card-link">
-                    <div class="project-card">
-                        <div class="image-wrapper">
-                            <img src="./img/propulsion/propulsion-main.jpg" alt="propulsion 25">
-                        </div>
-                        <h3>2025 PROPULSION</h3>
-                        <p>REALLY BIG ROCKET MOTOR</p>
-                    </div>
-                </a>
-
-                <a href="tank-weighing.html" class="project-card-link">
-                    <div class="project-card">
-                        <div class="image-wrapper">
-                            <img src="./img/tankweigh/tankweigh-main.jpg" alt="tank weighing">
-                        </div>
-                        <h3>TANK WEIGHING TEST STAND</h3>
-                        <p>KEROSENE & NOX DYNAMIC DATA LOGGING</p>
-                    </div>
-                </a>
-
-                <!-- <a href="vr-peripheral.html" class="project-card-link">
-                    <div class="project-card">
-                        <div class="image-wrapper">
-                            <img src="https://via.placeholder.com/600x400" alt="VR Peripheral">
-                        </div>
-                        <h3>MODULAR VR PERIPHERAL</h3>
-                        <p>Plug-and-play VR controller with Unity and embedded systems integration.</p>
-                    </div>
-                </a>
-
-                <a href="biophilic-dome.html" class="project-card-link">
-                    <div class="project-card">
-                        <div class="image-wrapper">
-                            <img src="https://via.placeholder.com/600x400" alt="Geodesic Dome?">
-                        </div>
-                        <h3>Proposal: Biophilic Dome in Phoenix</h3>
-                        <p>Conceptual geodesic dome for climate-controlled greenery in desert Arizona.</p>
-                    </div>
-                </a> -->
+        <a href="propulsion.html" class="project-card-link" onmouseenter="preloadAssets('propulsion')">
+          <div class="project-card">
+            <div class="image-wrapper"><img src="./img/propulsion/propulsion-main.jpg" alt="propulsion 25">
             </div>
+            <h3>2025 PROPULSION</h3>
+            <p>REALLY BIG ROCKET MOTOR</p>
+          </div>
+        </a>
 
-        </section>
+        <a href="finsight.html" class="project-card-link" onmouseenter="preloadAssets('finsight')">
+          <div class="project-card">
+            <div class="image-wrapper"><img src="./img/finsight/finsight-main.png" alt="FINsight 25"></div>
+            <h3>FINSIGHT V2</h3>
+            <p>FIN FLUTTER MEASUREMENT SYSTEM</p>
+          </div>
+        </a>
 
-    </main>
+        <a href="tank-weighing.html" class="project-card-link">
+          <div class="project-card">
+            <div class="image-wrapper"><img src="./img/tankweigh/tankweigh-main.jpg" alt="tank weighing">
+            </div>
+            <h3>TANK WEIGHING TEST STAND</h3>
+            <p>KEROSENE & NOX DYNAMIC DATA LOGGING</p>
+          </div>
+        </a>
+      </div>
 
-    <footer>
-        <p>Contact: jack.do@duke.edu</p>
-    </footer>
+      <!-- Masonry Grid -->
+      <div class="project-grid js-colcade" id="masonry">
+        <!-- Columns will be created dynamically -->
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <p>Contact: jack.do@duke.edu</p>
+  </footer>
 
-    <!-- Scroll-based header script -->
-    <script>
-        window.addEventListener('scroll', () => {
-            const stickyNav = document.getElementById('sticky-nav');
-            const header = document.getElementById('main-header');
-            if (window.scrollY > 150) {
-                stickyNav.classList.add('active');
-                header.style.opacity = '0';
-            } else {
-                stickyNav.classList.remove('active');
-                header.style.opacity = '1';
-            }
+  <!-- Header Scroll -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('sticky-nav');
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 150) {
+        nav.classList.add('active');
+        header.style.opacity = '0';
+      } else {
+        nav.classList.remove('active');
+        header.style.opacity = '1';
+      }
+    });
+  </script>
+
+  <!-- Hover-triggered image prefetching -->
+  <script>
+    const assets = {
+      canard: [
+        './img/canard/canard-splash.gif',
+        './img/canard/past-launch.gif',
+        './img/canard/canard-output-shaft-hover.gif',
+        './img/canard/canard-pinion-shaft-hover.gif'
+      ],
+      finsight: [
+        './img/finsight/flutter.gif',
+        './img/finsight/vis-1.gif',
+        './img/finsight/vis-2.gif',
+        './img/finsight/vis-3.gif'
+      ],
+      bbox: [
+        './img/bbox/bbox-splash.gif',
+        './img/bbox/bbox-body-hover.gif',
+        './img/bbox/bbox-lid-hover.gif'
+      ],
+      propulsion: [
+        './img/propulsion/shf.mp4',
+        './img/propulsion/shf-stack2.jpg',
+        './img/propulsion/shf-stack4.jpg',
+        './img/propulsion/manu-stack2.jpg',
+        './img/propulsion/manu-stack4.jpg'
+      ]
+    };
+
+    const loaded = new Set();
+
+    function preloadAssets(key) {
+      if (loaded.has(key)) return;
+      if (assets[key]) {
+        assets[key].forEach(url => {
+          const link = document.createElement('link');
+          link.rel = 'prefetch';
+          link.href = url;
+          document.head.appendChild(link);
         });
-    </script>
-</body>
+        loaded.add(key);
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/colcade@0/colcade.js"></script>
+  <script>
+    let colcade = null;
+
+    function updateColumns() {
+      const container = document.querySelector('#masonry');
+      const cardPool = document.querySelectorAll('#card-pool .project-card-link');
+
+      // Destroy existing Colcade instance
+      if (colcade) {
+        colcade.destroy();
+        colcade = null;
+      }
+
+      // Clear and rebuild columns
+      container.innerHTML = '';
+      const colCount = window.innerWidth < 600 ? 1 : window.innerWidth < 1000 ? 2 : 3;
+
+      for (let i = 0; i < colCount; i++) {
+        const col = document.createElement('div');
+        col.className = 'grid-col';
+        container.appendChild(col);
+      }
+
+      // Append fresh copies of cards
+      cardPool.forEach(card => {
+        container.appendChild(card.cloneNode(true));
+      });
+
+      // Reinitialize Colcade
+      colcade = new Colcade('#masonry', {
+        columns: '.grid-col',
+        items: '.project-card-link'
+      });
+    }
+
+    window.addEventListener('load', updateColumns);
+    window.addEventListener('resize', () => {
+      clearTimeout(window._resizeTimer);
+      window._resizeTimer = setTimeout(updateColumns, 300); // Debounced for performance
+    });
+  </script>
+
+
 
 </body>
 
