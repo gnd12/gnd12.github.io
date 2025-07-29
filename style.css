@@ -34,15 +34,16 @@ body {
     overflow-x: hidden;
 
     /* Base white background */
-    background-image: url('./img/irec25/self-bkg.jpg');
-    background-attachment: fixed;
-    background-size: cover;
+    /* background-image: url('./img/irec25/self-bkg.jpg'); */
+    /* background-attachment: fixed; */
+    /* background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.55); */
     /* Semi-transparent white */
 }
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -249,6 +250,27 @@ h2 {
     display: inline-block;
     width: 100%;
 }
+
+.static-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./img/irec25/self-bkg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(255, 255, 255, 0.55);
+  z-index: -1;
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+
 
 
 
