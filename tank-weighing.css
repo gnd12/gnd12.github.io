@@ -68,6 +68,7 @@ body {
     /* Prevent image overflow */
 }
 
+
 /* Mobile-specific scaling */
 @media (max-width: 768px) {
     .top-splash {
