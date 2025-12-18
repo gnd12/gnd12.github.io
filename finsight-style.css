@@ -414,6 +414,10 @@ img {
     .visual-item img {
         margin: 0;
     }
+    .statement {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
 }
 
 /* Wide screen responsive design for segments */
@@ -421,6 +425,11 @@ img {
     body {
         font-size: 1.5rem;
         line-height: 2rem;
+    }
+    .statement {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin: 1rem -2.5rem;
     }
     .screen-segment {
         width: 70%;
@@ -441,9 +450,6 @@ img {
     .right-img {
         height: 450px;
         width: 450px;
-    }
-    .statement {
-        margin: 1rem -2.5rem;
     }
     .finished-fin {
         margin: 0 20rem;

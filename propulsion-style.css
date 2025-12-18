@@ -85,23 +85,25 @@ header {
     letter-spacing: 0.2rem;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
+    line-height: 2.5rem;
     /* Adjust this value as needed */
 }
 
 .top-subtitle {
-    margin-top: 1rem;
-    letter-spacing: 0.3rem;;
+    margin-top: 0;
+    letter-spacing: 0.3rem;
     margin-bottom: 1.5rem;
     font-size: 2rem;
     opacity: 0.8;
+    line-height: 2rem;
 }
+
 
 
 
 .segment {
     align-self: center;
     width: 100vw;
-    height: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -429,6 +431,57 @@ h5 {
 }
 
 
+
+@media (max-width: 768px) {
+    .top-splash {
+        height: 65vh;
+        align-self: center;
+    }
+    .top-splash video {
+        height: 100%;
+        object-position: calc(50% + 20px) center;  /* Positive moves right, negative moves left */
+
+    }
+    .flex-row {
+        flex-direction: column;
+    }
+    .statement {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+    h3 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    h4 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        margin-bottom: 0;
+    }
+    .test-closure, .nozzle-carrier, .stand {
+        flex-direction: column-reverse ;
+    }
+    .left-img img, .right-img img {
+        
+        height: 300px !important;
+        width: 300px !important; 
+    }
+    .left-col, .right-col, .mid-col, video {
+        width: 90vw !important;
+    }
+    .team-card, .fix-card, .pose-card, .burn-card {
+        width: 90vw;
+        margin: 0;
+    }
+    .component-cards {
+        width: 90vw;
+        justify-content: space-around;
+        gap: 0;
+
+    }
+
+}
+
 .photo-grid-parallax {
     position: relative;
     height: 90vh; 
@@ -469,6 +522,37 @@ h5 {
     
     transition: 0.3s ease-in-out;
 }
+@media (max-width: 768px) {
+  .horizontal-gallery {
+    position: static;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    background: #000; /* optional backdrop to maintain contrast */
+    gap: 0;
+  }
+
+  .gallery-item {
+    max-width: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  .gallery-item img {display: block;         /* remove default inline gap */
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .photo-grid-parallax {
+    height: auto;
+  }
+}
 
 footer {
     width: 100vw;
@@ -483,4 +567,14 @@ footer {
     bottom: 0;
     left: 0;
     z-index: -1;
+}
+#mobile-footer {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #mobile-footer {
+        display: block;
+        position: static
+    }
 }
