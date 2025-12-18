@@ -238,14 +238,6 @@ img {
 }
 
 
-@media (max-width: 768px) {
-
-    .load-cell,
-    .tank-brace {
-        flex-direction: column-reverse;
-    }
-}
-
 
 
 /* .dual-layer .left-img img {
@@ -301,10 +293,16 @@ img {
         /* Optional: make rows auto height */
     }
 
-    .dual-layer .left-img img,
-    .dual-layer .right-img img {
+    .dual-layer .left-img img {
         width: 90vw;
         height: auto;
+    }
+    .dual-layer .right-img {
+        width: 90vw;
+        height: auto;
+    }
+    .dual-layer .right-img img {
+        margin: 0;
     }
 
 }
@@ -347,8 +345,7 @@ img {
 @media (max-width: 768px) {
     .finished-fin {
         padding: 0;
-        margin: 0;
-        margin-bottom: 2rem;
+        margin: 1rem;
         width: 95vw;
         align-self: center;
     }
@@ -422,12 +419,11 @@ img {
         
     }
 
-    /* .reef-item img,
+    .reef-item img,
     .intg-item img,
     .visual-item img {
-        width: 300px;
-        align-self: center;
-    } */
+        margin: 0;
+    }
 }
 
 @media (max-width: 768px) {
