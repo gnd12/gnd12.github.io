@@ -60,16 +60,33 @@ body {
 
 .top-splash {
     width: 100%;
-    padding-top: 0rem;
     overflow: hidden;
+    padding: 0.5rem 0;
+    margin: 0;
 
     /* Prevent image overflow */
+}
+
+/* Mobile-specific scaling */
+@media (max-width: 768px) {
+    .top-splash {
+        height: 70vh;
+        width: 90vw;
+        align-self: center;
+        align-content: center;
+    }
+
+    .top-splash img {
+        height: 55%;
+    }
 }
 
 .top-splash img {
     width: 100%;
     object-fit: cover;
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -82,17 +99,19 @@ header {
     padding: 0;
     font-size: 3rem;
     letter-spacing: 0.2rem;
-    margin-top: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 2.5rem;
     /* Adjust this value as needed */
 }
 
 .top-subtitle {
-    margin-top: 1rem;
-    letter-spacing: 0.3rem;;
+    margin-top: 0;
+    letter-spacing: 0.3rem;
     margin-bottom: 1.5rem;
     font-size: 2rem;
     opacity: 0.8;
+    line-height: 2rem;
 }
 
 .screen-segment {
@@ -145,6 +164,12 @@ header {
     flex-direction: row;
 }
 
+@media (max-width: 768px) {
+    .flex-row {
+        flex-direction: column;
+    }
+}
+
 
 .hover-note {
     font-family: "VT323", serif;
@@ -167,6 +192,8 @@ h3 {
     background-color: rgba(13, 14, 83);
     padding: 1.5rem;
 }
+
+
 h4 {
     font-family: 'VT323', serif;
     font-size: 4rem;
@@ -213,6 +240,21 @@ h5 {
     background-image: url('./img/bbox/bbox-stack4.jpg');
 }
 
+@media (max-width: 768px) {
+    .mech-design .left-img {
+        background-image: url('./img/bbox/bbox-stack2.jpg');
+        height: 50vh;
+        padding: 0;
+        margin: 0;
+    }
+    .mech-design .right-img {
+        background-image: url('./img/bbox/bbox-stack4.jpg');
+        height: 50vh;
+        padding: 0;
+        margin: 0;
+    }
+}
+
 .housing .left-img {
     background-image: url('./img/bbox/bbox-lid-cam.jpg');
     background-repeat: no-repeat;
@@ -230,8 +272,8 @@ h5 {
     width: 70vw;
     text-align: center;
     margin: 1rem;
-    
 }
+
 .housing .right-img {
     background-image: url('./img/bbox/bbox-body-cam.jpg');
     background-repeat: no-repeat;
@@ -244,6 +286,29 @@ h5 {
 
 .housing .right-img:hover {
     background-image: url('./img/bbox/bbox-body-hover.gif');
+}
+
+@media (max-width: 768px) {
+    .housing .left-img {
+        background-image: url('./img/bbox/bbox-lid-hover.gif');
+        height: 30vh;
+        padding: 0;
+        margin: 0;
+    }
+    .housing .right-img {
+        background-image: url('./img/bbox/bbox-body-hover.gif');
+        height: 30vh;
+        padding: 0;
+        margin: 0;
+    }
+    .housing .mid-col {
+        width: 80vw;
+        padding: 0;
+        margin: 0;
+    }
+    .hover-note {
+        visibility: collapse;
+    }
 }
 
 .fea {
@@ -417,6 +482,20 @@ h5 {
     padding: 1rem;
 }
 
+@media (max-width: 768px) {
+    h3 {
+        max-width: 90vw;
+        font-size: 2.5rem;
+        text-align: center;
+        line-height: normal;
+    }
+    h4 {
+        max-width: 90vw;
+        font-size: 3rem;
+        line-height: normal;
+        text-align: center;
+    }
+}
 
 .photo-grid-parallax {
     position: relative;

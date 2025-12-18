@@ -117,11 +117,30 @@ header {
 .segment {
     align-self: center;
     width: 100vw;
-    height: auto;
+    min-height: 300px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
+}
+
+/* Wide screen responsive design for segments */
+@media (min-width: 1400px) {
+    .segment {
+        width: 70%;
+    }
+    .top-splash {
+        width: 75%;
+        align-self: center;
+    }
+    header {
+        width: 75%;
+        align-self: center;
+    }
+    h3 {
+        width: 75%;
+        align-self: center;
+    }
 }
 
 
