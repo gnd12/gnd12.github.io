@@ -116,6 +116,7 @@ main {
     margin: 0;
     width: 100%;
     /* Ensure main section takes up the full width */
+    justify-items: center;
 }
 
 .about {
@@ -147,6 +148,7 @@ h2 {
     width: 100%;
     /* Make the projects section full width */
     padding: 0rem 0rem;
+    max-width: 1500px;
 }
 
 
@@ -279,4 +281,19 @@ footer {
     padding: 2rem 1rem;
     opacity: 0.5;
     font-size: 0.9rem;
+}
+
+@media (min-width: 2100px) {
+    nav {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .about p{
+        font-size: 1.25rem;
+        line-height: 2.5rem;
+    }
+    .about {
+        max-width: 900px;
+    }
+
 }
