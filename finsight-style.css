@@ -141,6 +141,8 @@ header {
     padding: 1rem;
 }
 
+
+
 /* For smaller screens: let height grow with content */
 /* @media (max-width: 768px) {
     .screen-segment {
@@ -307,18 +309,6 @@ img {
 
 }
 
-/* .dual-layer .left-img img {
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    object-position: center;
-}
-.dual-layer .right-img img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    object-position: center;
-} */
 
 /* Desktop default */
 .swap-direction::after {
@@ -423,6 +413,43 @@ img {
     .intg-item img,
     .visual-item img {
         margin: 0;
+    }
+}
+
+/* Wide screen responsive design for segments */
+@media (min-width: 2100px) {
+    body {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .screen-segment {
+        width: 70%;
+    }
+    .top-splash {
+        width: 80%;
+        align-self: center;
+    }
+    header {
+        width: 80%;
+        align-self: center;
+    }
+    h3 {
+        width: 75%;
+        align-self: center;
+    }
+    .left-img,
+    .right-img {
+        height: 450px;
+        width: 450px;
+    }
+    .statement {
+        margin: 1rem -2.5rem;
+    }
+    .finished-fin {
+        margin: 0 20rem;
+    }
+    .reef-grid, .intg-grid, .visual-grid {
+        max-width: 1200px;
     }
 }
 

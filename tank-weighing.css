@@ -124,24 +124,7 @@ header {
     padding: 1rem;
 }
 
-/* Wide screen responsive design for segments */
-@media (min-width: 1400px) {
-    .segment {
-        width: 70%;
-    }
-    .top-splash {
-        width: 75%;
-        align-self: center;
-    }
-    header {
-        width: 75%;
-        align-self: center;
-    }
-    h3 {
-        width: 75%;
-        align-self: center;
-    }
-}
+
 
 
 
@@ -218,6 +201,32 @@ img {
 @media (max-width: 768px) {
     .load-cell, .tank-brace {
         flex-direction: column-reverse;
+    }
+}
+
+/* Wide screen responsive design for segments */
+@media (min-width: 2100px) {
+    body {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .segment {
+        width: 70%;
+    }
+    .top-splash {
+        width: 75%;
+        align-self: center;
+    }
+    header {
+        width: 75%;
+        align-self: center;
+    }
+    h3 {
+        width: 75%;
+        align-self: center;
+    }
+    img {
+        width: 450px;
     }
 }
 
