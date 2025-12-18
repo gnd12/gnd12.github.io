@@ -462,11 +462,10 @@ h5 {
         flex-direction: column-reverse ;
     }
     .left-img img, .right-img img {
-        
-        height: 300px !important;
-        width: 300px !important; 
+        width: 90vw !important;
+        height: auto !important;
     }
-    .left-col, .right-col, .mid-col, video {
+    .left-col, .right-col, .mid-col {
         width: 90vw !important;
     }
     .team-card, .fix-card, .pose-card, .burn-card {
@@ -478,6 +477,10 @@ h5 {
         justify-content: space-around;
         gap: 0;
 
+    }
+    .irec-body video {
+        height: auto;
+        width: 100vw;
     }
 
 }
