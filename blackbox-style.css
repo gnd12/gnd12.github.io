@@ -67,19 +67,6 @@ body {
     /* Prevent image overflow */
 }
 
-/* Mobile-specific scaling */
-@media (max-width: 768px) {
-    .top-splash {
-        height: 70vh;
-        width: 90vw;
-        align-self: center;
-        align-content: center;
-    }
-
-    .top-splash img {
-        height: 55%;
-    }
-}
 
 .top-splash img {
     width: 100%;
@@ -116,7 +103,7 @@ header {
 
 .screen-segment {
     align-self: center;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
@@ -134,17 +121,11 @@ header {
 }
 
 
-/* For smaller screens: let height grow with content */
-@media (max-width: 768px) {
-    .screen-segment {
-        height: auto;
-        padding: 2rem 1rem;
-    }
-}
+
 
 .statement {
     background-color: rgba(13, 14, 83);
-    margin: 0 -2.5rem;
+    margin: 0 -1.5rem;
     margin-top: 1.5rem;
     padding: 1rem 2rem;
     text-align: center;
@@ -164,11 +145,6 @@ header {
     flex-direction: row;
 }
 
-@media (max-width: 768px) {
-    .flex-row {
-        flex-direction: column;
-    }
-}
 
 
 .hover-note {
@@ -240,21 +216,6 @@ h5 {
     background-image: url('./img/bbox/bbox-stack4.jpg');
 }
 
-@media (max-width: 768px) {
-    .mech-design .left-img {
-        background-image: url('./img/bbox/bbox-stack2.jpg');
-        height: 50vh;
-        padding: 0;
-        margin: 0;
-    }
-    .mech-design .right-img {
-        background-image: url('./img/bbox/bbox-stack4.jpg');
-        height: 50vh;
-        padding: 0;
-        margin: 0;
-    }
-}
-
 .housing .left-img {
     background-image: url('./img/bbox/bbox-lid-cam.jpg');
     background-repeat: no-repeat;
@@ -288,28 +249,6 @@ h5 {
     background-image: url('./img/bbox/bbox-body-hover.gif');
 }
 
-@media (max-width: 768px) {
-    .housing .left-img {
-        background-image: url('./img/bbox/bbox-lid-hover.gif');
-        height: 30vh;
-        padding: 0;
-        margin: 0;
-    }
-    .housing .right-img {
-        background-image: url('./img/bbox/bbox-body-hover.gif');
-        height: 30vh;
-        padding: 0;
-        margin: 0;
-    }
-    .housing .mid-col {
-        width: 80vw;
-        padding: 0;
-        margin: 0;
-    }
-    .hover-note {
-        visibility: collapse;
-    }
-}
 
 .fea {
     margin-left: 2rem;
@@ -326,16 +265,9 @@ h5 {
     display: flex;
     flex-direction: row;
 }
-.fea .right-img {
-    width: 25vw;
-}
-.fea .mid-img {
-    width: 25vw;
-}
 
 .fea img {
-    height:  260px;
-    width: 350px;
+    width: 700px;
 }
 
 .shock-suspension {
@@ -351,7 +283,7 @@ h5 {
     padding: 5rem;
 }
 .shock-suspension .left-img img {
-    height: 90vh;
+    height: 70vh;
 }
 
 .elec-design .left-img {
@@ -483,17 +415,107 @@ h5 {
 }
 
 @media (max-width: 768px) {
+    .top-splash {
+        height: 70vh;
+        width: 90vw;
+        align-self: center;
+        align-content: center;
+    }
+
+    .top-splash img {
+        height: 55%;
+    }
+    .flex-row {
+        flex-direction: column;
+    }
+
     h3 {
-        max-width: 90vw;
-        font-size: 2.5rem;
-        text-align: center;
-        line-height: normal;
+        font-size: 3rem;
+        line-height: 3rem;
     }
     h4 {
         max-width: 90vw;
         font-size: 3rem;
         line-height: normal;
         text-align: center;
+    }
+
+    .hover-note {
+        height: 0;
+        visibility: hidden;
+        margin: 0;
+    }
+    .screen-segment {
+        height: auto;
+        padding: 1rem 1rem;
+    }
+    .segment {
+        margin: 1rem 1rem 1rem 1rem;
+        padding: 0;
+        justify-items: center;
+    }
+    .left-col, .right-col, .mid-col {
+        margin-top: 0 !important;
+        width: 90vw !important;
+        padding: 0rem !important;
+    }
+    .left-img, .right-img {
+        width: 90vw !important;
+        height: 90vw !important;
+        padding: 0 !important;
+    }
+    .mech-design .left-img, .mech-design .right-img,
+    .elec-design .left-img, .elec-design .right-img, .irec25 .left-img, .irec25 .right-img {
+        height: 0 !important;
+    }
+
+    .housing .left-img {
+        order: 1;
+    }
+    .housing .right-img {
+        order: 2;
+    }
+    .housing .mid-col {
+        order: 3;
+    }
+
+    .fea {
+        flex-direction: column-reverse;
+    }
+    .fea .right-img {
+        width: 90vw !important;
+        height: auto !important;
+    }
+    .fea img, .shock-suspension .left-img img {
+        width: 100%;
+        height: auto;
+    }
+    .shock-suspension .left-img {
+        height: auto !important;
+    }
+    .supercap, .marco-polo {
+        flex-direction: column-reverse;
+    }
+    .supercap h4 {
+        letter-spacing: 0.2rem;
+    }
+    .supercap .right-img, .teensy .left-img, .marco-polo .right-img {
+        height: auto !important;
+    }
+    .supercap .right-img img, .marco-polo .right-img img, .teensy .left-img img {
+        margin: 0;
+        width: 100%;
+    }
+    .statement {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+    .statement-pics img {
+        width: 90vw;
+    }
+    .irec-body video {
+        height: auto;
+        width: 100vw;
     }
 }
 
@@ -538,6 +560,38 @@ h5 {
     transition: 0.3s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .horizontal-gallery {
+    position: static;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    background: #000; /* optional backdrop to maintain contrast */
+    gap: 0;
+  }
+
+  .gallery-item {
+    max-width: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  .gallery-item img {display: block;         /* remove default inline gap */
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .photo-grid-parallax {
+    height: auto;
+  }
+}
+
 footer {
     width: 100vw;
     text-align: center;
@@ -553,3 +607,9 @@ footer {
     z-index: -1;
 }
 
+@media (max-width: 768px) {
+    #mobile-footer {
+        display: block;
+        position: static
+    }
+}

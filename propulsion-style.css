@@ -122,13 +122,7 @@ header {
     
 }
 
-/* For smaller screens: let height grow with content */
-@media (max-width: 768px) {
-    .screen-segment {
-        height: auto;
-        padding: 2rem 1rem;
-    }
-}
+
 
 .flex-col {
     flex-direction: column;
@@ -489,6 +483,10 @@ h5 {
     .irec-body video {
         height: auto;
         width: 100vw;
+    }
+    .screen-segment {
+        height: auto;
+        padding: 1rem 1rem;
     }
 
 }
