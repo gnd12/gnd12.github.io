@@ -91,7 +91,7 @@ body {
     width: 100%;
     padding-top: 0rem;
     overflow: hidden;
-
+    margin: 0;
     /* Prevent image overflow */
 }
 
@@ -99,6 +99,8 @@ body {
     width: 100%;
     object-fit: cover;
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -111,18 +113,21 @@ header {
     padding: 0;
     font-size: 3rem;
     letter-spacing: 0.2rem;
-    margin-top: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 2.5rem;
     /* Adjust this value as needed */
 }
 
 .top-subtitle {
-    margin-top: 1rem;
-    letter-spacing: 0.3rem;;
+    margin-top: 0;
+    letter-spacing: 0.3rem;
     margin-bottom: 1.5rem;
     font-size: 2rem;
     opacity: 0.8;
+    line-height: 2rem;
 }
+
 
 .statement {
     background-color: rgba(13, 14, 83);
@@ -547,8 +552,8 @@ b {
     object-fit: cover;
     object-position: center;
     display: block;
-    margin-top: 2rem;
 }
+
 .podium .right-col {
     width: 450px;
     text-align: center;
@@ -556,6 +561,173 @@ b {
 }
 
 
+@media (max-width: 768px) {
+    main {
+        align-items: center;
+    }
+    .top-splash {
+        height: 63vh;
+        width: 90vw;
+        align-self: center;
+        align-content: center;
+    }
+    p {
+        text-align: center !important;
+    }
+
+    .top-splash img {
+        height: 50%;
+    }
+    .flex-row {
+        flex-direction: column;
+    }
+    .statement h3, #bottom-statement{
+        font-size: 1rem !important;
+        line-height: 1.25rem !important;
+    }
+    h3 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+    h4 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        max-width: 80vw;
+    }
+    .problem-statement > .row:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+    .assessment iframe {
+        max-width: 90vw;
+    }
+    .left-img img, .right-img img {
+        width: 90vw !important;
+        height: auto !important;
+    }
+    .left-col, .right-col, .mid-col {
+        width: 90vw !important;
+    }
+    .vibration .row .p-col {
+        max-height: fit-content;
+    }
+    .manufacturing {
+        justify-content: center;
+        max-width: 85vw;
+    }
+    .component-cards {
+        width: 80vw;
+        justify-content: center;
+        gap: 0;
+
+    }
+    .housing-card, .linkage-card, .gear-card, .canard-card {
+        flex: 0 0 90%;
+        height: 70vw;
+    }
+    .card-text h5{
+        font-size: 1.25rem;
+        margin: 0.5rem;
+    }
+    .card-text p {
+        margin: 0.5rem;
+    }
+    .shaft-cols {
+        height: auto;
+        width: 80vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin: 1rem auto;
+        gap: 2rem;
+    }
+    .shaft-cols .shaft-text {
+        order: 3;
+        margin: 0;
+    }
+    .shaft-cols #left-column {
+        order: 2;
+        height: 30vh !important;
+        margin-bottom: 0;
+    }
+    .shaft-cols #right-column {
+        order: 1;
+        height: 30vh !important;
+        
+        margin-bottom: 0;
+    }
+    .finished-shafts {
+        width: 90vw;
+    }
+
+    .linkages-horn .row {
+        width: 100%;
+        flex-direction: column-reverse;
+        align-self: center;
+    }
+    .p-col {
+        max-width: 100%;
+    }
+    .jig .row {
+        align-self: center;
+        max-width: 100%;
+    }
+    .row img {
+        max-width: 100%;
+        height: auto;
+    }
+    .can-desert {
+        width: 85vw;
+        align-items: center;
+    }
+    .can-desert-caption {
+        margin-bottom: 0;
+    }
+    .aoa-calc .row .sim-img {
+        order: 1;
+    }
+    .aoa-calc .row p {
+        order: 2;
+    }
+    .control {
+        max-width: 85vw;
+    }
+
+    .control .left-col, .control .right-col {
+        flex-direction: row;
+    }
+    .control .left-col img, .control .right-col img {
+        height: 30vh;
+    }
+    .pi-tune-img {
+        width: 85vw;
+        max-height: 100vh !important;
+    }
+    .screen-segment {
+        height: auto;
+        padding: 1rem 1rem;
+    }
+    .segment .right-col, .segment .left-col {
+        height: auto;
+        padding: 0 1rem;
+    }
+    .segment {
+        height: auto;
+        padding: 0 1rem;
+    }
+    .hover-note {
+        height: 0;
+        visibility: hidden;
+        margin: 0;
+    }
+
+
+
+    .irec-body video {
+        height: auto;
+        width: 100vw;
+    }
+
+}
 
 .photo-grid-parallax {
     position: relative;
@@ -597,6 +769,38 @@ b {
     
     transition: 0.3s ease-in-out;
 }
+@media (max-width: 768px) {
+  .horizontal-gallery {
+    position: static;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    background: #000; /* optional backdrop to maintain contrast */
+    gap: 0;
+  }
+
+  .gallery-item {
+    max-width: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  .gallery-item img {display: block;         /* remove default inline gap */
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .photo-grid-parallax {
+    height: auto;
+  }
+}
+
 
 footer {
     width: 100vw;
@@ -611,4 +815,15 @@ footer {
     bottom: 0;
     left: 0;
     z-index: -1;
+}
+
+#mobile-footer {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #mobile-footer {
+        display: block;
+        position: static
+    }
 }
