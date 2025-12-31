@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack Do - Engineering Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="flightstack.css" />
+    
+</head>
+
+<body>
+    <nav class="compact-nav" id="static-nav">
+        <div class="nav-title"><a href="index.html">Jack Do</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="top-splash">
+            <picture>
+                <!-- Mobile image: screen width ≤ 768px -->
+                <source srcset="./img/flightstack/splash-mobile.jpg" media="(max-width: 768px)">
+                <img src="./img/flightstack/splash.jpg">
+            </picture>
+        </div>
+
+        <header class="top-header">
+            <h1 class="top-title">ENO FLIGHT STACK</h1>
+            <h2 class="top-subtitle">FLIGHT-READY PROPULSION SYSTEM FOR BIPROPELLANT LIQUID ROCKET ENGINE</h2>
+        </header>
+        
+        <div class="statement flex-col">
+            <p>To support efforts leading up to static fire of Duke AERO's first-ever liquid rocket engine, ENO, I deisgned a complete propulsion system flight stack for a future vehicle that will fly with this engine. This is the second iteration of a flight stack for ENO; V1 was designed by <a href="https://www.linkedin.com/in/arthur-gwozdz/" target="_blank">Arthur Gwozdz</a> in 2023-2024. V2 is the first flight-ready version, complete with a full-fledged thrust structure and plumbing system.</p>
+            <p>The propulsion stack alone stands a little over 13' tall and fits in a 7.5" diameter airframe. The full structure weighs 131 lb, giving a dry TWR of around 4.3 with the designed thrust level of 2500N. Future efforts will focus on further reducing structural mass for a more flight-viable design.</p>
+        </div>
+
+        <h3>Key Features</h3>
+        <div class="thrust-structure segment flex-row">
+            <div class="left-img">
+                <img src = "./img/flightstack/thrust-structure.jpg" alt="Thrust Structure">
+            </div>
+            <div class="right-col">
+                <h4>Thrust Structure</h4>
+                <p>
+                    The thrust structure consists of the combustion chamber, 3 tanks, and inter-tank struts. The engine thrust is transferred through the walls of the tanks and the steel struts connecting the tanks. On each end of the tanks there is a 1/4" steel plate to serve as attachment points for the struts and guides for the propellant lines.
+                </p>
+            </div>
+        </div>
+        <div class="psnt-plumbing segment flex-row">
+            <div class="left-col">
+                <h4>Pressurant Plumbing</h4>
+                <p>
+                    The pressurant plumbing system is situated in the pressurant and oxidizer inter-tank structure, and consists of a pressure regulator and multiple solenoid and check valves needed for pressurant filling and flow regulation. A quick-disconnect panel serves as the filling point for the pressurant tank. Other supporting and safety features such as tank boiloff venting and tank pressure transducers are also included in this system. All plumbing components are COTS from McMaster-Carr.
+                </p>
+            </div>
+            <div class="right-img">
+                <img src = "./img/flightstack/pressurant-plumbing.jpg" alt="Pressurant Plumbing">
+            </div>
+        </div>
+        <div class="ox-plumbing segment flex-row">
+            <div class="left-img">
+                <img src = "./img/flightstack/nox-plumbing.jpg" alt="Ox plumbing">
+            </div>
+            <div class="right-col">
+                <h4>Oxidizer Plumbing</h4>
+                <p>
+                    The oxidizer plumbing system sits between the oxidizer and fuel tanks, and also consists of multiple solenoid and check valves for oxidizer filling and flow regulation. A quick-disconnect panel serves as the filling point for the oxidizer tank. Compression fittings and steel hardline tubings are used between components to allow free swivelling to fit components into this tight space. 
+                </p>
+            </div>
+        </div>
+        <div class="fuel-plumbing segment flex-row">
+            <div class="left-col">
+                <h4>Fuel Plumbing</h4>
+                <p>
+                    The fuel plumbing system distributes fuel and oxidizer to the combustion chamber and contains the primary fuel and oxidizer valves. The purge line runs from the pressurant tank and connects to a tee fitting here to purge both the fuel and oxidizer lines in the case of an abort. All hardline tubings are either straight or contains one 90 degree bend only, for ease of assembly. A tee fitting is used to split the primary fuel lines into two; and two soft hoses (in blue) feed directly into the cooling jacket of the chamber.
+                </p>
+            </div>
+            <div class="right-img">
+                <img src = "./img/flightstack/fuel-plumbing.jpg" alt="Fuel plumbing">
+            </div>
+        </div>
+        <h3>CAD Model</h3>
+        <div class="cad segment">
+            <iframe title="Duke AERO ENO2500 Flight Stack" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f3f5997864b24bdfaf08d30af3fb69a0/embed?autostart=1&ui_theme=dark"> </iframe>
+        </div>
+        
+    </main>
+
+    <section class="photo-grid-parallax">
+        
+    </section>
+    <footer>
+        &copy; 2025 Jack Do | gnd12@duke.edu
+    </footer>
+</body>
