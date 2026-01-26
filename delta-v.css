@@ -1,0 +1,392 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    
+    background-color: white;
+    padding-top: 2.5rem;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: #000000;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    /* Base black background */
+}
+
+
+#static-nav {
+    font-family: 'Josefin Sans', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(0, 0, 0);
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.compact-nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* style.css additions for Orbit Delta-V widget
+   Paste this into your existing style.css (or a new file you already referenced).
+   These styles target the classes/IDs created by orbit-delta-v.js.
+*/
+
+/* Theme variables */
+:root{
+  --odv-bg: #000000;          /* main panel background (black) */
+  --odv-header-bg: #7d7d7d;   /* grey header */
+  --odv-accent: #7bed6b;      /* green output boxes */
+  --odv-white: #ffffff;
+  --odv-text: #ffffff;
+  --odv-muted: #cfcfcf;
+  --odv-radius: 14px;
+  --odv-panel-padding: 22px;
+}
+
+/* Container */
+.odv-container{
+  width: 100%;
+  max-width: 1100px; /* similar to screenshot aspect */
+  margin: 1.2rem auto;
+  background: var(--odv-bg);
+  color: var(--odv-text);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Header bar */
+.odv-header{
+  background: var(--odv-header-bg);
+  color: var(--odv-white);
+  text-align: center;
+  font-weight: 700;
+  padding: 20px 16px;
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
+}
+
+/* Main area split left / right */
+.odv-main{
+  display: flex;
+  gap: 28px;
+  padding: var(--odv-panel-padding);
+  align-items: stretch;
+}
+
+/* Left / Right columns */
+.odv-left{
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: flex-start;
+  padding-right: 8px;
+}
+
+.odv-right{
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* Rows */
+.odv-row{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Labels on left column */
+.odv-label{
+  min-width: 170px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--odv-white);
+}
+
+/* Inputs */
+.odv-left input[type="number"],
+.odv-left select{
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #000;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.06);
+}
+
+/* Site radio list */
+.odv-sitebox{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: 170px; /* align with inputs */
+}
+
+.odv-site{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--odv-muted);
+  font-weight: 600;
+}
+
+.odv-site input[type="radio"]{
+  transform: scale(1.05);
+  accent-color: var(--odv-accent);
+}
+
+/* Orbit categories */
+.odv-orbitcats{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: 170px; /* so they align under inputs like screenshot */
+}
+
+.odv-orbitcat{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--odv-muted);
+  font-weight: 600;
+}
+
+.odv-orbitcat input[type="radio"]{
+  transform: scale(1.05);
+  accent-color: var(--odv-accent);
+}
+
+/* Calculate button block */
+.odv-calcrow{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.odv-assumptions{
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 2rem;
+}
+.odv-assumptions-warning{
+  color: red;
+  font-weight: bold;
+}
+.odv-calc-btn{
+  background: var(--odv-white);
+  color: #000;
+  border: none;
+  padding: 18px 36px;
+  border-radius: 28px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  user-select: none;
+  margin-left: 170px;
+}
+
+.odv-calc-btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,0.5); }
+.odv-calc-btn:active{ transform: translateY(0); }
+
+/* Right column output rows */
+.odv-out-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 8px;
+}
+
+.odv-out-label{
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--odv-white);
+  flex: 1 1 60%;
+  text-align: left;
+}
+
+/* Green value box */
+.odv-out-value{
+  flex: 0 0 180px;
+  min-height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #071200;
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.08);
+}
+
+/* specific green look */
+.green-box{
+  background: linear-gradient(180deg, var(--odv-accent) 0%, #5fd04f 60%);
+  border: 2px solid rgba(0,0,0,0.06);
+}
+
+/* Tighter sizing on small screens */
+@media (max-width: 880px){
+  .odv-main{
+    flex-direction: column;
+    padding: 18px;
+    gap: 18px;
+  }
+  .odv-left, .odv-right{
+    flex-basis: auto;
+    width: 100%;
+  }
+  .odv-label{
+    min-width: 120px;
+    font-size: 1rem;
+  }
+  .odv-sitebox, .odv-orbitcats, .odv-calcrow{
+    margin-left: 0;
+  }
+  .odv-out-value{
+    flex: 1 1 auto;
+    min-height: 48px;
+  }
+}
+
+/* Very large screen to match screenshot proportions */
+@media (min-width: 1400px){
+  .odv-container{
+    border-radius: 6px;
+  }
+  .odv-header{
+    font-size: 3rem;
+    padding: 26px 18px;
+  }
+  .odv-calc-btn{
+    font-size: 1.9rem;
+    padding: 22px 44px;
+    border-radius: 34px;
+  }
+  .odv-out-value{
+    min-height: 56px;
+    font-size: 1.25rem;
+  }
+}
+
+/* Small visual polish for outputs when value is '-' */
+.odv-out-value:empty,
+.odv-out-value:contains("-"){
+  color: rgba(0,0,0,0.45);
+}
+
+/* Accessibility touch: focus outlines */
+.odv-left input:focus,
+.odv-left select:focus,
+.odv-calc-btn:focus,
+.odv-site input:focus,
+.odv-orbitcat input:focus {
+  outline: 3px solid rgba(125,125,125,0.18);
+  outline-offset: 2px;
+}
+
+
+/* Wide screen responsive design for segments */
+@media (min-width: 2100px) {
+    
+}
+
+
+.photo-grid-parallax {
+    position: relative;
+    height: 10vh; 
+    pointer-events: none
+}
+
+.horizontal-gallery {
+    position: fixed;
+    width: 100vw;
+    height: 45vh;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    pointer-events: none;
+    
+}
+#gallery1 {
+    top: 10vh;
+}
+
+#gallery2 {
+    top: 50vh;
+}
+
+.horizontal-gallery img {  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: all;
+}
+
+.horizontal-gallery img:hover {
+    filter: brightness(0.7);
+    
+    transition: 0.3s ease-in-out;
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    color: white;
+
+    background-color: rgba(13, 14, 83);
+    /* or use a solid color: background-color: #222; */
+    padding: 1rem;
+
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
