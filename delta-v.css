@@ -225,7 +225,7 @@ body {
   box-shadow: 0 6px 18px rgba(0,0,0,0.4);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
   user-select: none;
-  margin-left: 170px;
+  margin-left: 120px;
 }
 
 .odv-calc-btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,0.5); }
@@ -285,6 +285,10 @@ body {
   }
   .odv-sitebox, .odv-orbitcats, .odv-calcrow{
     margin-left: 0;
+  }
+  .odv-left input[type="number"],
+  .odv-left select{
+    max-width: 150px;
   }
   .odv-out-value{
     flex: 1 1 auto;
