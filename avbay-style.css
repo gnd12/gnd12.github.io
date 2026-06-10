@@ -130,7 +130,6 @@ header {
     padding: 1rem;
 }
 
-
 .screen-segment {
     align-self: center;
     width: 100vw;
@@ -164,8 +163,26 @@ header {
     }
 }
 
+.hover-note {
+    font-family: "VT323", serif;
+    font-size: 1.5rem;;
+}
+
 b {
     font-size: 1.25rem;
+}
+
+h2:not(.top-subtitle) {
+    font-family: 'VT323', serif;
+    font-size: 5rem;
+    letter-spacing: 0.3rem;
+    line-height: 5rem;
+    color: white;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+    text-align: center;
+    background-color: rgba(13, 14, 83);
+    padding: 1.5rem;
 }
 
 h3 {
@@ -215,6 +232,66 @@ img {
     object-position: center;
 }
 
+.prelim-analysis .right-img {
+    background-image: url('./img/avbay/avbayASM26.jpg');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 60vh;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+}
+.prelim-analysis .right-img:hover {
+    background-image: url('./img/avbay/avbayASM25.jpg');
+}
+
+.prelim-analysis .right-img::after {
+    content: "AvBay, 2026";
+    position: absolute;
+    bottom: 5%;
+    right: 0%;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'VT323', serif;
+    padding: .5rem;
+    font-size: 2rem;
+    border-radius: 4px;
+}
+.prelim-analysis .right-img:hover::after {
+    content: "AvBay, 2025";
+}
+
+
+.bulkhead-comparison .left-img {
+    background-image: url('./img/avbay/BHeyebolt.jpg');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 60vh;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+}
+.bulkhead-comparison .left-img:hover {
+    background-image: url('./img/avbay/BHubolt.jpg');
+}
+
+/* Overlay year badge that changes on hover */
+.bulkhead-comparison .left-img::after {
+    content: "Bulkhead, 2026";
+    position: absolute;
+    bottom: 5%;
+    right: 0%;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'VT323', serif;
+    padding: .5rem;
+    font-size: 2rem;
+    border-radius: 4px;
+}
+.bulkhead-comparison .left-img:hover::after {
+    content: "Bulkhead, 2025";
+}
+
 .left-col, .right-col {
     text-align: center;
     width: 35vw;
@@ -222,10 +299,8 @@ img {
     flex-direction: column;
     justify-content: space-between;
 }
-iframe {
-    width: 90vw;
-    height: 70vh;
-}
+
+
 
 @media (max-width: 768px) {
     .left-col, .right-col {

@@ -29,71 +29,203 @@
 
     <main>
         <div class="top-splash flex-col">
-            <!-- <img src="./img/avbay/main.jpg"> -->
-            <h2 class="WIP">THIS PROJECT IS STILL UNDER DEVELOPMENT FOR DUKE AERO'S 2025-2026 30,000 FT ROCKET</h2>
-            <h2 class="WIP">PLEASE CHECK BACK LATER!</h2>
+            <img src="./img/avbay/main.jpg">
+            <!-- <h2 class="WIP">THIS PROJECT IS STILL UNDER DEVELOPMENT FOR DUKE AERO'S 2025-2026 30,000 FT ROCKET</h2>
+            <h2 class="WIP">PLEASE CHECK BACK LATER!</h2> -->
         </div>
 
         <header class="top-header">
             <h1 class="top-title">AVIONICS BAY</h1>
-            <h2 class="top-subtitle">AVIONICS SYSTEM FOR DUKE AERO'S 25-26 ROCKET</h2>
+            <h2 class="top-subtitle">COMPREHENSIVE AVIONICS PACKAGE TARGETING 30,000 FT ABOVE THE TEXAS DESERT</h2>
         </header>
         
-        <!-- <div class="statement flex-col">
-            <p>To support efforts leading up to static fire of Duke AERO's first-ever liquid rocket engine, ENO, I deisgned a complete propulsion system flight stack for a future vehicle that will fly with this engine. This is the second iteration of a flight stack for ENO; V1 was designed by <a href="https://www.linkedin.com/in/arthur-gwozdz/" target="_blank">Arthur Gwozdz</a> in 2023-2024. V2 is the first flight-ready version, complete with a full-fledged thrust structure and plumbing system.</p>
-            <p>The propulsion stack alone stands a little over 13' tall and fits in a 7.5" diameter airframe. The full structure weighs 131 lb, giving a dry TWR of around 4.3 with the designed thrust level of 2500N. Future efforts will focus on further reducing structural mass for a more flight-viable design.</p>
+        <div class="statement flex-col">
+            <p>As the Avionics & Separation Lead for Devil's Advocate, Duke AERO's 2025-2026 rocket, it was my job to lead the development of an avionics system that will control and monitor the rocket to target precisely 30,000 feet in apogee.</p>
         </div>
-
-        <h3>Key Features</h3>
-        <div class="thrust-structure segment flex-row">
+        <div class="screen-segment flex-row analysis">
+            <div class="left-img"></div>
+            <h2>Preliminary Analysis</h2>
+            <div class="right-img"></div>
+        </div>
+        <div class="prelim-analysis segment flex-row">
+            <div class="left-col">
+                <p>
+                    Drawing on lessons learned from Duke AERO's previous rocket, Perseus, where recovery volume was highly limited, I made the decision to prioritize avionics bay volume reduction early in the design process to make more room for recovery devices. 
+                </p>
+                <p>    
+                    Our objective was to decrease avionics bay length by approximately <b>20%</b> while maintaining sufficient mounting area for avionics hardware and volume for critical components such as battery, black box, and CO₂ deployment cartridges. This led to the development of a completely novel avionics bay layout. The AvBay structure was then designed by <a href="https://hunter-cullina.super.site/" target="_blank">Hunter Cullina</a>, with isogrid interlocking panels and truss rods connecting two bulkheads.
+                </p>
+                <p class="hover-note">Hover to compare with previous AvBay design</p>
+            </div>
+            <div class="right-img"></div>
+        </div>
+        <div class="screen-segment flex-row subsystems">
+            <div class="left-img"></div>
+            <h2>Subsystems</h2>
+            <div class="right-img"></div>
+        </div>
+        <h3>Separation System</h3>
+        <div class="sep-avbay segment flex-row">
             <div class="left-img">
-                <img src = "./img/flightstack/thrust-structure.jpg" alt="Thrust Structure">
+                <img src = "./img/avbay/thrust-structure.jpg" alt="Comparison of AvBay Designs">
             </div>
             <div class="right-col">
-                <h4>Thrust Structure</h4>
+                <h4>Keep It Simple, Stupid</h4>
                 <p>
-                    The thrust structure consists of the combustion chamber, 3 tanks, and inter-tank struts. The engine thrust is transferred through the walls of the tanks and the steel struts connecting the tanks. On each end of the tanks there is a 1/4" steel plate to serve as attachment points for the struts and guides for the propellant lines.
+                    The single most important task of the Avionics Bay is to successfully trigger separation events of the rocket to deploy recovery parachutes. Each separation event is quadruple-redundant, with 2 CO2 cartridges and 2 e-matches per cartridge, controlled by 2 flight computers. The use of tried-and-tested Tinder Rocketry Raptor CO2 system ensures repeatable and reliable separation without relying on messy black powder and thus maintains effectiveness even at high altitude.
                 </p>
             </div>
         </div>
         <div class="psnt-plumbing segment flex-row">
             <div class="left-col">
-                <h4>Pressurant Plumbing</h4>
+                <h4>Blow It Up, Or Blow It Out</h4>
                 <p>
-                    The pressurant plumbing system is situated in the pressurant and oxidizer inter-tank structure, and consists of a pressure regulator and multiple solenoid and check valves needed for pressurant filling and flow regulation. A quick-disconnect panel serves as the filling point for the pressurant tank. Other supporting and safety features such as tank boiloff venting and tank pressure transducers are also included in this system. All plumbing components are COTS from McMaster-Carr.
+                    The increased recovery volume also necessitates larger CO2 canisters to ensure consistent separation. A redesigned blast disk for the main recovery volume and the guided recovery module as a pseudo-blast disk for the drogue volume further complicates the design. I developed a theoretical calculation tool to preliminarily size the CO2 canisters, and together with <a target="_blank" href="https://maddoxhussar.com/" >Maddox Hussar</a>, our Recovery System Lead, we conducted a series of mini separation tests to verify this. 
                 </p>
             </div>
             <div class="right-img">
-                <img src = "./img/flightstack/pressurant-plumbing.jpg" alt="Pressurant Plumbing">
+                <img src = "./img/avbay/septests.gif" alt="Mini Sep Test">
             </div>
         </div>
-        <div class="ox-plumbing segment flex-row">
+
+        <h3>Pressure Bulkhead</h3>
+        <div class="bulkhead-comparison segment flex-row">
             <div class="left-img">
-                <img src = "./img/flightstack/nox-plumbing.jpg" alt="Ox plumbing">
             </div>
             <div class="right-col">
-                <h4>Oxidizer Plumbing</h4>
+                <h4>Recovery Volume Is Key</h4>
                 <p>
-                    The oxidizer plumbing system sits between the oxidizer and fuel tanks, and also consists of multiple solenoid and check valves for oxidizer filling and flow regulation. A quick-disconnect panel serves as the filling point for the oxidizer tank. Compression fittings and steel hardline tubings are used between components to allow free swivelling to fit components into this tight space. 
+                    The pressure bulkheads are highly demanding components. They must withstand the high separation pressure and snatch force, serve as mounting point for electrical connectors and cameras, while being as light as possible. One major change to the bulkheads to minimize length was the switch from U bolt to eye bolt as the recovery attachment point.
+                </p>
+                <p class="hover-note">Hover to compare U bolt and eye bolt designs</p>
+            </div>
+        </div>
+        <div class="BH-FEA segment flex-row">
+            <div class="left-col">
+                <h4>Light And Strong</h4>
+                <p>
+                    The bulkhead design is primarily an FEA-driven iterative process. Load cases are generated from theoretical calculations and dynamic simulations of both separation pressure and snatch force, and the design is iterated on to minimize weight. More mounting points for electrical management and cameras means more complexity added without compromising the structural integrity of the bulkhead.
+                </p>
+                <p class="hover-note">Aft bulkheadFEA performed by <a target="_blank" href="https://hunter-cullina.super.site/" >Hunter Cullina</a></p>
+            </div>
+            <div class="right-img">
+                <img src = "./img/avbay/BHFEA.jpg" alt="Bulkhead FEA">
+            </div>
+        </div>
+
+        <div class="manufacturing-panels segment flex-row">
+            <div class="hover-panel hover-panel-left"></div>
+            <div class="hover-panel-text">
+                <h4>Manufacturing</h4>
+                <p>Machined out of 6061-T6 Aluminum , 80% of the stock material was removed over multiple CNC operations, allowing for complex contoured pockets with precise tolerances.</p>
+                <p class="hover-note">Hover over the parts to see manufacturing operations.</p>
+            </div>
+            <div class="hover-panel hover-panel-right"></div>
+        </div>
+
+        <div class="IRL-pic segment flex-col">
+            <img src="./img/avbay/IRL.JPG">
+            <figcaption>A fully machined bulkhead.</figcaption>
+        </div>
+
+        <h3>Access Hatch</h3>
+        <div class="hatch segment flex-row">
+            <div class="left-img">
+                <img src = "./img/avbay/hatch.jpg" alt="Access Hatch">
+            </div>
+            <div class="right-col">
+                <h4>Tactical Reload</h4>
+                <p>
+                    Another novel feature of the AvBay is the introduction of an access hatch, allowing for battery replacement and code flashing without de-integrating the rocket. This allows for the use of much more power-hungry components without concerns about battery life.
                 </p>
             </div>
         </div>
-        <div class="fuel-plumbing segment flex-row">
+        <div class="hatch-composite segment flex-row">
             <div class="left-col">
-                <h4>Fuel Plumbing</h4>
+                <h4>Advanced Composites</h4>
                 <p>
-                    The fuel plumbing system distributes fuel and oxidizer to the combustion chamber and contains the primary fuel and oxidizer valves. The purge line runs from the pressurant tank and connects to a tee fitting here to purge both the fuel and oxidizer lines in the case of an abort. All hardline tubings are either straight or contains one 90 degree bend only, for ease of assembly. A tee fitting is used to split the primary fuel lines into two; and two soft hoses (in blue) feed directly into the cooling jacket of the chamber.
+                    An access hatch cutout on the Avionics body tube compromises the structural integrity of the tube, so two forged carbon fiber struts are needed to transfer the loads around the cutout. Instead of tapping screw holes directly into carbon fiber, I pioneered the use of threaded inserts molded directly into the struts. I also proposed a forged fiberglass hatch cover to ensure RF transparency, but fiberglass proved to be much harder to forge than carbon fiber and much more brittle, so the cover is eventually cut out of a fiberglass tube instead.
                 </p>
             </div>
             <div class="right-img">
-                <img src = "./img/flightstack/fuel-plumbing.jpg" alt="Fuel plumbing">
+                <img src = "./img/avbay/hatch.jpg" alt="Access Hatch">
             </div>
         </div>
-        <h3>CAD Model</h3>
-        <div class="cad segment">
-            <iframe title="Duke AERO ENO2500 Flight Stack" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f3f5997864b24bdfaf08d30af3fb69a0/embed?autostart=1&ui_theme=dark"> </iframe>
-        </div> -->
-        
+
+        <h3>Avionics Suite</h3>
+        <div class="hatch segment flex-row">
+            <div class="left-img">
+                <img src = "./img/avbay/kalman.jpg" alt="Kalman code">
+            </div>
+            <div class="right-col">
+                <h4>Triple Redundancy</h4>
+                <p>
+                    For the first time ever, the Avionics sensor suite is triply redundant. Three barometers and three IMUs onboard allows for error voting and a more robust state-estimating Kalman filter. The Kalman filter originated from a TinyEKF implementation which allows for light-weight running on an ARM-based microcontroller.
+                </p>
+            </div>
+        </div>
+        <div class="hatch-composite segment flex-row">
+            <div class="left-col">
+                <h4>ERIS Epsilon</h4>
+                <p>
+                    The brain of the rocket, the fifth-generation ERIS Epsilon flight computer builds upon years of development and testing of the ERIS family of flight computers. Development led by my Avionics Co-Lead, <a target="_blank" href="https://www.linkedin.com/in/charlieberens/" >Charlie Berens</a>, ERIS Epsilon features a more compact form factor in keeping with the AvBay's volume reduction goals while retaining the same processing power and reliability by using a Teensy 4.1 microcontroller.
+                </p>
+            </div>
+            <div class="right-img">
+                <img src = "./img/avbay/hatch.jpg" alt="Access Hatch">
+            </div>
+        </div>
+        <div class="hatch segment flex-row">
+            <div class="left-img">
+                <img src = "./img/avbay/kalman.jpg" alt="Kalman code">
+            </div>
+            <div class="right-col">
+                <h4>Doing The Basics Right</h4>
+                <p>
+                    With the growing complexity of the AvBay, it is more important than ever to ensure that the basics are done right. This year's AvBay introduces a thorough standardization of wiring and connectors. All wire-to-wire connections feature vibration-proof ring terminals and terminal blocks, and service loop strain reliefs are added to all connection points.
+                </p>
+            </div>
+        </div>
+        <div class="hatch-composite segment flex-row">
+            <div class="left-col">
+                <h4>Blackbox</h4>
+                <p>
+                    Marking a critical shift in design, the blackbox now serves as the primary data logger. This considerably speeds up ERIS's processing speed by offloading the writing process and allows for more data to be logged with higher frequency. A more detailed write-up of the blackbox design can be found here: <a target="_blank" href="blackbox.html">Blackbox (2024-2025)</a>.
+                </p>
+            </div>
+            <div class="right-img">
+                <img src = "./img/avbay/hatch.jpg" alt="Access Hatch">
+            </div>
+        </div>
+
+        <h3>Live Video</h3>
+        <div class="hatch segment flex-row">
+            <div class="left-img">
+                <img src = "./img/avbay/kalman.jpg" alt="Kalman code">
+            </div>
+            <div class="right-col">
+                <h4>720p At Ultra Long Range</h4>
+                <p>
+                    This is not the first time Duke AERO has attempted live video from the rocket, but it is the first time that we have attempted to do so for a 30,000 ft flight. The 3.4GHz, 720p live video system was developed by our talented team of <a target="_blank" href="https://www.derock.dev/" >Derock Xie</a> and <a target="_blank" href="https://www.linkedin.com/in/alex-chindris/" >Alex Chindris</a>, despite numerous setbacks caused by last-minute regulation changes. Controlled by a Radxa Zero 3e, the system consists of a Pluto SDR board and a 500mW RF power amplifier.
+                </p>
+            </div>
+        </div>
+        <div class="hatch-composite segment flex-row">
+            <div class="left-col">
+                <h4>It Gets Hot In There</h4>
+                <p>
+                    Data from our Bayboro test launch revealed that the AvBay can reach temperatures of up to 70°C. Under the Texas sun, this could get higher. Combined with the introduction of the power-hungry SDR meant that thermal management was a critical concern for the live video system. With less than 2 weeks before IREC 2026, I designed and machined an aluminum heat sink with active cooling from a 30mm fan. 
+                </p>
+            </div>
+            <div class="right-img">
+                <img src = "./img/avbay/heatsink.jpg" alt="Heatsink">
+            </div>
+        </div>
+
+        <div class="statement flex-col">
+            <p>After a whole year of development, the system is ready to take flight at IREC 2026. Check back in later for updates!</p>
+        </div>
+
     </main>
 
     <section class="photo-grid-parallax">
