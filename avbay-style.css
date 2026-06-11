@@ -232,6 +232,33 @@ img {
     object-position: center;
 }
 
+.analysis .left-img {
+    background-image: url('./img/avbay/A1.jpg');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+.analysis .left-img:hover {
+    background-image: url('./img/avbay/A2.jpg');
+}
+
+.analysis .right-img {
+    background-image: url('./img/avbay/B1.jpg');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+.analysis .right-img:hover {
+    background-image: url('./img/avbay/B2.jpg');
+}
+
+
 .prelim-analysis .right-img {
     background-image: url('./img/avbay/avbayASM26.jpg');
     background-repeat: no-repeat;
@@ -262,33 +289,31 @@ img {
 }
 
 
-.bulkhead-comparison .left-img {
+.bulkhead-comparison .right-img {
     background-image: url('./img/avbay/BHeyebolt.jpg');
     background-repeat: no-repeat;
-    width: 60vw;
+    width: 40vw;
     max-width: 700px;
     height: 50vh;
     background-size: contain;
-    background-position: left;
+    background-position: center;
     position: relative;
 }
-.bulkhead-comparison .left-img:hover {
+.bulkhead-comparison .right-img:hover {
     background-image: url('./img/avbay/BHubolt.jpg');
 }
 
 /* Overlay year badge that changes on hover */
-.bulkhead-comparison .left-img::after {
+.bulkhead-comparison .right-img::before {
     content: "Bulkhead, 2026";
     position: absolute;
     bottom: 5%;
-    right: 0%;
+    right: -8%;
     color: rgba(0, 0, 0, 0.7);
     font-family: 'VT323', serif;
-    padding: .5rem;
     font-size: 2rem;
-    border-radius: 4px;
 }
-.bulkhead-comparison .left-img:hover::after {
+.bulkhead-comparison .right-img:hover::before {
     content: "Bulkhead, 2025";
 }
 
