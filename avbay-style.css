@@ -60,17 +60,10 @@ body {
 
 
 .top-splash {
-    display: flex; /*comment this line out for actual img*/
-    font-family: 'VT323', serif;
-    font-size: 1.5rem;
-    line-height: normal;
-    text-align: center;
     width: 100%;
     overflow: hidden;
     padding: 1rem 0;
     margin: 0;
-    justify-content: center;
-    height: 70vh;
     /* Prevent image overflow */
 }
 
@@ -316,6 +309,16 @@ img {
 .bulkhead-comparison .right-img:hover::before {
     content: "Bulkhead, 2025";
 }
+.machined-BH {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+}
+.machined-BH img {
+    width: 100%;
+}
 
 .left-col, .right-col {
     text-align: center;
@@ -324,7 +327,6 @@ img {
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 
 @media (max-width: 768px) {
