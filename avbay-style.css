@@ -282,6 +282,32 @@ img {
 }
 
 
+.subsystems .left-img {
+    background-image: url('./img/avbay/C1.jpg');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+.subsystems .left-img:hover {
+    background-image: url('./img/avbay/C2.jpg');
+}
+
+.subsystems .right-img {
+    background-image: url('./img/avbay/D1.jpg');
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 700px;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+.subsystems .right-img:hover {
+    background-image: url('./img/avbay/D2.jpg');
+}
+
 .bulkhead-comparison .right-img {
     background-image: url('./img/avbay/BHeyebolt.jpg');
     background-repeat: no-repeat;
@@ -309,6 +335,35 @@ img {
 .bulkhead-comparison .right-img:hover::before {
     content: "Bulkhead, 2025";
 }
+
+
+.manufacturing-panels .hover-panel-left {
+    background-image: url('./img/avbay/fbh_cropped.jpg');
+    background-repeat: no-repeat;
+    width: 70vw;
+    max-width: 700px;
+    height: 400px;
+    background-size: contain;
+    background-position: center;
+}
+.manufacturing-panels .hover-panel-left:hover {
+    background-image: url('./img/avbay/fbh_cropped.gif');
+}
+
+.manufacturing-panels .hover-panel-right {
+    background-image: url('./img/avbay/ABH.jpg');
+    background-repeat: no-repeat;
+    width: 70vw;
+    max-width: 700px;
+    height: 400px;
+    background-size: contain;
+    background-position: center;
+}
+.manufacturing-panels .hover-panel-right:hover {
+    background-image: url('./img/avbay/ABH.gif');
+}
+
+
 .machined-BH {
     display: flex;
     align-self: center;
@@ -320,7 +375,7 @@ img {
     width: 100%;
 }
 
-.left-col, .right-col {
+.left-col, .right-col, .hover-panel-text {
     text-align: center;
     width: 35vw;
     display: flex;
@@ -386,7 +441,7 @@ img {
 
 .photo-grid-parallax {
     position: relative;
-    height: 10vh; 
+    height: 90vh; 
     pointer-events: none
 }
 
