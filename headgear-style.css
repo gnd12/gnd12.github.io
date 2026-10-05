@@ -370,7 +370,7 @@ h5 {
 .statement-pics {
     justify-content: space-evenly;
     padding-top: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
 }
 .statement-pics img {
     width: 450px;
@@ -382,14 +382,14 @@ h5 {
 
 @media (max-width: 768px) {
     .top-splash {
-        height: 70vh;
+        height: 55vh;
         width: 90vw;
         align-self: center;
         align-content: center;
     }
 
     .top-splash img {
-        height: 55%;
+        height: 80%;
     }
     .flex-row {
         flex-direction: column;
@@ -404,6 +404,23 @@ h5 {
         font-size: 3rem;
         line-height: normal;
         text-align: center;
+    }
+    .component-cards {
+        width: 80vw;
+        justify-content: center;
+        gap: 0;
+
+    }
+    .housing-card, .fin-card, .reflector-card, .workholding-card {
+        flex: 0 0 90%;
+        height: 70vw;
+    }
+    .card-text h5{
+        font-size: 1.25rem;
+        margin: 0.5rem;
+    }
+    .card-text p {
+        margin: 0.5rem;
     }
 
     .hover-note {
@@ -430,9 +447,8 @@ h5 {
         height: 90vw !important;
         padding: 0 !important;
     }
-    .mech-design .left-img, .mech-design .right-img,
-    .elec-design .left-img, .elec-design .right-img, .irec25 .left-img, .irec25 .right-img {
-        height: 0 !important;
+    .housing .left-img, .housing .right-img {
+        height: 50vh !important;
     }
 
     .housing .left-img {
@@ -445,33 +461,18 @@ h5 {
         order: 3;
     }
 
-    .fea {
+    .heat-transfer, .arm {
         flex-direction: column-reverse;
     }
-    .fea .right-img {
+    .heat-transfer .right-img, .arm .right-img {
         width: 90vw !important;
         height: auto !important;
     }
-    .fea img, .shock-suspension .left-img img {
+    .heat-transfer img, .arm img, .reflector .left-img img, .packaging .left-img img {
         width: 100%;
         height: auto;
     }
-    .shock-suspension .left-img {
-        height: auto !important;
-    }
-    .supercap, .marco-polo {
-        flex-direction: column-reverse;
-    }
-    .supercap h4 {
-        letter-spacing: 0.2rem;
-    }
-    .supercap .right-img, .teensy .left-img, .marco-polo .right-img {
-        height: auto !important;
-    }
-    .supercap .right-img img, .marco-polo .right-img img, .teensy .left-img img {
-        margin: 0;
-        width: 100%;
-    }
+
     .statement {
         font-size: 1rem;
         line-height: 1.25rem;
@@ -482,10 +483,6 @@ h5 {
     .pics-sub .hover-note{
         font-size: 1rem;
         visibility: visible !important;
-    }
-    .irec-body video {
-        height: auto;
-        width: 100vw;
     }
 }
 
