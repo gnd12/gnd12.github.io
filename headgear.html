@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack Do - Engineering Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="headgear-style.css" />
+
+    
+
+</head>
+
+<body>
+    <nav class="compact-nav" id="static-nav">
+        <div class="nav-title"><a href="index.html">Jack Do</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="top-splash">
+            <img src="./img/headgear/splash.gif">
+        </div>
+        <header class="top-header">
+            <h1 class="top-title">SURGICAL HEADGEAR</h1>
+            <h2 class="top-subtitle">HEADLAMP WITH INTEGRATED STEREO CAMERAS FOR ML VISION TRAINING</h2>
+        </header>
+        
+        <div class="statement flex-col">
+            <p>Working as a design engineer with Duke DesignHub, I was approached by a Duke Hospital surgeon who needed a custom headlamp with integrated stereo cameras for machine learning vision training.</p>
+            <p>The objectives were simple: to make it as light and inobstructive as possible for use in long surgical procedures.</p>
+        </div>
+
+        <div class="segment flex-row housing">
+            <div class="left-img"></div>
+            <div class="mid-col">
+                <h4>ALUMINUM HOUSING</h4>
+                <p>Aluminum was chosen for the LED's heat dissipation requirements. The LED PCB is screwed directly into the housing and thermal paste is used for maximum heat transfer</p>
+                <p>The housing is designed as two separate pieces, fastened together with 3 countersunk screws for a flush fit and alignment. Nominal wall thickness is .050" to keep weight low.</p>
+                <p>Ribs are added to the front housing for buckling strength. Mounting points for the two cameras and the central LED are integrated on the back housing.</p>
+            </div>
+            <div class="right-img"></div>
+        </div>
+
+        <div class="segment flex-row heat-transfer">
+            <div class="left-col">
+                <h4>INTEGRATED COOLING FINS</h4>
+                <p>The fins on the back housing were sized from heat transfer hand calculations, assuming natural convection and a target steady state temperature for the LED PCB. Manufacturing constraints were also taken into account: the gap between the fins must be greater than 1/8" (smallest available endmill)</p>
+            </div>
+            <div class="right-img">
+                <img src="./img/headgear/fins.jpg">
+            </div>
+        </div>
+
+        <!--<div class="screen-segment flex-row finished-housing">
+            <img src="./img/bbox/bbox-finished-housing.jpg">
+        </div>
+        -->x
+        <div class="segment flex-row reflector">
+            <div class="left-img">
+                <img src="./img/headgear/reflector.gif">
+            </div>
+            <div class="right-col">
+                <h4>REFLECTOR BLOCK</h4>
+                <p>The LED PCB comes with an acrylic reflector lens. I designed an aluminum reflector block to fit around the lens and provide additional reflectivity. The parabolic contour of the lens took some prototyping for optimal fit. The reflector lens has a tab and registers against a slot on the reflector block.</p>
+                <p>Two cutouts on the bottom side provide clearance for solder joints on the LED PCB. Four screws fasten this block against the PCB and the back housing.</p>
+            </div>
+        </div>
+
+        <div class="segment flex-row arm">
+            <div class="left-col">
+                <h4>STAY-PUT ARTICULATED ARMS</h4>
+                <p>The articulated arms are designed to stay in position once adjusted. The linkages are waterjetted from 1/16" aluminum plate. The joints are off-the-shelf binding barrels.</p>
+                <p>The backing block is contoured to fit an off-the-shelf plastic headband. Two countersunk screws and a backing plate attaches the block to the headband</p>
+            </div>
+            <div class="right-img">
+                <img src="./img/headgear/arms.jpg">
+            </div>
+        </div>
+
+        <div class="segment flex-row packaging">
+            <div class="left-img">
+                <img src="./img/headgear/internal.jpg">
+            </div>
+            <div class="right-col">
+                <h4>INTERNALS</h4>
+                <p>The 3 modules are packaged as close together as possible, mounted to back housing with #2 screws. The entire assembly is <b>3" x 1.75" x 1.125"</b> and weighs less than <b>4 oz.</b></p>
+                <p>Some room above the modules allow for LED wiring and flex cables for the cameras. Wirings are run through the top.</p>
+            </div>
+        </div>
+
+        <div class="manufacturing">
+            <h4>MANUFACTURING</h4>
+            <div class="component-cards">
+                <div class="housing-card">
+                    <!-- add img to background card -->
+                    <div class="card-text">
+                        <h5>Toolpathing front housing internal</h5>
+                    </div>
+                </div>
+                <div class="fin-card">
+                    <div class="card-text">
+                        <h5>Toolpathing heat sink fins</h5>
+                    </div>
+                </div>
+                <div class="reflector-card">
+                    <div class="card-text">
+                        <h5>Toolpathing reflector block</h5>
+                    </div>
+                </div>
+                <div class="workholding-card">
+                    <div class="card-text">
+                        <h5>Setup for drilling linkage hole</h5>
+                    </div>
+                </div>
+            </div>
+            <p>This was my first time attempting to machine such small intricate parts on the CNC. Minimizing setup for for each part was one of my main goals. It was also a fun challenge to try and achieve good surface finish by honing in on finishing pass settings.</p> 
+            <p>The thin wall and bottom caused some chatter, but I was able to clean it up with finishing passes. The fins came out surprisingly clean and the endmill still intact.</p>
+        </div>
+
+        <div class="statement-pics flex-col segment">
+            
+            <div class="segment pics-sub flex-col">
+                <div class="pics flex-row">
+                    <img src="./img/headgear/back-housing.jpg" alt="Back housing">
+                    <img src="./img/headgear/parts.jpg" alt="Parts!">
+                    <img src="./img/headgear/assembly.jpg" alt="Assembly">
+                </div>
+                <div class="hover-note">Shiny parts after machining & assembly. Coin for scale.</div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="mobile-footer">
+        &copy; 2025 Jack Do | gnd12@duke.edu
+    </footer>
+
+
+    <section class="photo-grid-parallax">
+        <div class="horizontal-gallery" id="gallery1">
+            <img src="img/headgear/stock.jpg" alt="">
+            <img src="img/headgear/section.jpg" alt="">
+            <img src="img/headgear/back_asm.jpg" alt="">
+        </div>
+        <div class="horizontal-gallery" id="gallery2">
+            <img src="img/headgear/head_view.jpg" alt="">
+            <img src="img/headgear/reflector.jpg" alt="">
+            <img src="img/headgear/machine.gif" alt="">
+            <img src="img/headgear/prototype.jpg" alt="">
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Jack Do
+    </footer>
+</body>

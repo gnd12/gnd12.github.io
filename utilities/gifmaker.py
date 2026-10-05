@@ -23,7 +23,8 @@ total_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
 source_duration = total_frames / source_fps
 
 # Keep shorter videos at approximately their original speed.
-gif_fps = 20
+gif_fps = 15
+max_width=500
 frame_count = max(1, int(min(source_duration, seconds) * gif_fps))
 frames = []
 
@@ -36,8 +37,8 @@ for i in range(frame_count):
         break
 
     height, width = frame.shape[:2]
-    if width > 800:
-        frame = cv2.resize(frame, (800, round(height * 800 / width)))
+    if width > max_width:
+        frame = cv2.resize(frame, (max_width, round(height * max_width / width)))
 
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     frames.append(Image.fromarray(frame))
@@ -50,7 +51,7 @@ frames[0].save(
     output,
     save_all=True,
     append_images=frames[1:],
-    duration=50,  # 50 milliseconds per frame = 20 FPS
+    duration=1000/gif_fps,  #math to get the duration in milliseconds based on the desired FPS
     loop=0,
     disposal=2,
 )
