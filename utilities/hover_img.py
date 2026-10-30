@@ -3,7 +3,7 @@ from tkinter import filedialog
 from PIL import Image, ImageTk, ImageOps
 
 # Canvas/export dimensions. Preview is displayed at half size.
-WIDTH, HEIGHT = 1200, 1800
+WIDTH, HEIGHT = 1600, 1200
 PREVIEW = 0.4
 BORDER = 3
 

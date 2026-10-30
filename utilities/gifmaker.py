@@ -23,8 +23,8 @@ total_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
 source_duration = total_frames / source_fps
 
 # Keep shorter videos at approximately their original speed.
-gif_fps = 15
-max_width=500
+gif_fps = 10
+max_width=400
 frame_count = max(1, int(min(source_duration, seconds) * gif_fps))
 frames = []
 
